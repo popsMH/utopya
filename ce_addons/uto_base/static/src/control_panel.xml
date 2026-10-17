@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-inherit="web.ControlPanel" t-inherit-mode="extension">
+        <xpath expr="//button[contains(@class, 'u_layter_tg')]" position="attributes">
+            <attribute name="class">u_layter_tg btn btn-outline-primary lh-1 d-none</attribute>
+        </xpath>
+    </t>
+</templates>

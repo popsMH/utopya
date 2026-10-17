@@ -1,0 +1,92 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* uto_webclient
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0+e-20250203\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-17 19:41+0000\n"
+"PO-Revision-Date: 2025-10-17 19:41+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: uto_webclient
+#. odoo-python
+#: code:uto_webclient/models/res_config_settings.py:0
+msgid "No URL specified"
+msgstr "Aucune URL spécifiée"
+
+#. module: uto_webclient
+#. odoo-python
+#: code:uto_webclient/models/res_config_settings.py:0
+msgid "Invalid URL"
+msgstr "URL non valide"
+
+#. module: uto_webclient
+#. odoo-python
+#: code:uto_webclient/models/res_config_settings.py:0
+msgid "Succesful Connection"
+msgstr "Connexion réussie"
+
+#. module: uto_webclient
+#. odoo-python
+#: code:uto_webclient/models/res_config_settings.py:0
+msgid "Failed Connection"
+msgstr "Échec de la connexion"
+
+#. module: uto_webclient
+#. odoo-python
+#: code:uto_webclient/models/res_config_settings.py:0
+msgid "No odoo enterprise URL found in the settings"
+msgstr "Aucune URL d'Odoo Enterprise trouvée dans les paramètres"
+
+#. module: uto_webclient
+#. odoo-python
+#: code:uto_webclient/models/res_config_settings.py:0
+msgid "Enterprise API error: %s"
+msgstr "Erreur de l'API Entreprise : %s"
+
+#. module: uto_webclient
+#. odoo-javascript
+#: code:uto_webclient/static/src/webclient/navbar/navbar.js:0
+msgid "This database expires today. "
+msgstr "Cette base de données expire aujourd'hui. "
+
+#. module: uto_webclient
+#. odoo-javascript
+#: code:uto_webclient/static/src/webclient/navbar/navbar.js:0
+msgid "This database has beed expired : %s. "
+msgstr "Cette base de données a expiré : %s. "
+
+#. module: uto_webclient
+#. odoo-javascript
+#: code:uto_webclient/static/src/webclient/navbar/navbar.js:0
+msgid "This database will expire in %s. "
+msgstr "Cette base de données expirera dans %s. "
+
+#. module: uto_webclient
+#. odoo-javascript
+#: code:uto_webclient/static/src/webclient/navbar/navbar.js:0
+msgid "%s days"
+msgstr "%s jours"
+
+#. module: uto_webclient
+#. odoo-javascript
+#: code:uto_webclient/static/src/webclient/navbar/navbar.xml:0
+msgid "Update your subscription"
+msgstr "Mettez à jour votre abonnement"
+
+#. module: uto_webclient
+#: model_terms:ir.ui.view,arch_db:uto_webclient.res_config_settings_view_form
+msgid "Odoo Enterprise Instance"
+msgstr "Instance Odoo Enterprise"
+
+#. module: uto_webclient
+#: model_terms:ir.ui.view,arch_db:uto_webclient.res_config_settings_view_form
+msgid "URL of the Enterprise Odoo Instance"
+msgstr "URL de l'instance Odoo Enterprise"

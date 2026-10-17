@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <!-- SMARTWATCH CAPACITIES: 4 Go, 8 Go, 16 Go, 32 Go, 64 Go, Inconnu -->
+    <record model="device.capacity" id="4go_smartwatch" forcecreate="True">
+        <field name="name">4 Go</field>
+        <field name="default_code">4go</field>
+        <field name="value">4 Go</field>
+        <field name="device_type">smartwatch</field>
+        <field name="sequence">1</field>
+    </record>
+    <record model="device.capacity" id="8go_smartwatch" forcecreate="True">
+        <field name="name">8 Go</field>
+        <field name="default_code">8go</field>
+        <field name="value">8 Go</field>
+        <field name="device_type">smartwatch</field>
+        <field name="sequence">2</field>
+    </record>
+    <record model="device.capacity" id="16go_smartwatch" forcecreate="True">
+        <field name="name">16 Go</field>
+        <field name="default_code">16go</field>
+        <field name="value">16 Go</field>
+        <field name="device_type">smartwatch</field>
+        <field name="sequence">3</field>
+    </record>
+    <record model="device.capacity" id="32go_smartwatch" forcecreate="True">
+        <field name="name">32 Go</field>
+        <field name="default_code">32go</field>
+        <field name="value">32 Go</field>
+        <field name="device_type">smartwatch</field>
+        <field name="sequence">4</field>
+    </record>
+    <record model="device.capacity" id="64go_smartwatch" forcecreate="True">
+        <field name="name">64 Go</field>
+        <field name="default_code">64go</field>
+        <field name="value">64 Go</field>
+        <field name="device_type">smartwatch</field>
+        <field name="sequence">5</field>
+    </record>
+    <record model="device.capacity" id="inconnu_smartwatch" forcecreate="True">
+        <field name="name">Inconnu</field>
+        <field name="default_code">inconnu</field>
+        <field name="value">Inconnu</field>
+        <field name="device_type">smartwatch</field>
+        <field name="sequence">6</field>
+    </record>
+
+    <!-- SMARTPHONE CAPACITIES: 16 Go, 32 Go, 64 Go, 128 Go, 256 Go, 512 Go, 1 To, 2 To, Inconnu -->
+    <record model="device.capacity" id="16go_smartphone" forcecreate="True">
+        <field name="name">16 Go</field>
+        <field name="default_code">16go</field>
+        <field name="value">16 Go</field>
+        <field name="device_type">smartphone</field>
+        <field name="sequence">1</field>
+    </record>
+    <record model="device.capacity" id="32go_smartphone" forcecreate="True">
+        <field name="name">32 Go</field>
+        <field name="default_code">32go</field>
+        <field name="value">32 Go</field>
+        <field name="device_type">smartphone</field>
+        <field name="sequence">2</field>
+    </record>
+    <record model="device.capacity" id="64go_smartphone" forcecreate="True">
+        <field name="name">64 Go</field>
+        <field name="default_code">64go</field>
+        <field name="value">64 Go</field>
+        <field name="device_type">smartphone</field>
+        <field name="sequence">3</field>
+    </record>
+    <record model="device.capacity" id="128go_smartphone" forcecreate="True">
+        <field name="name">128 Go</field>
+        <field name="default_code">128go</field>
+        <field name="value">128 Go</field>
+        <field name="device_type">smartphone</field>
+        <field name="sequence">4</field>
+    </record>
+    <record model="device.capacity" id="256go_smartphone" forcecreate="True">
+        <field name="name">256 Go</field>
+        <field name="default_code">256go</field>
+        <field name="value">256 Go</field>
+        <field name="device_type">smartphone</field>
+        <field name="sequence">5</field>
+    </record>
+    <record model="device.capacity" id="512go_smartphone" forcecreate="True">
+        <field name="name">512 Go</field>
+        <field name="default_code">512go</field>
+        <field name="value">512 Go</field>
+        <field name="device_type">smartphone</field>
+        <field name="sequence">6</field>
+    </record>
+    <record model="device.capacity" id="1to_smartphone" forcecreate="True">
+        <field name="name">1 To</field>
+        <field name="default_code">1to</field>
+        <field name="value">1 To</field>
+        <field name="device_type">smartphone</field>
+        <field name="sequence">7</field>
+    </record>
+    <record model="device.capacity" id="2to_smartphone" forcecreate="True">
+        <field name="name">2 To</field>
+        <field name="default_code">2to</field>
+        <field name="value">2 To</field>
+        <field name="device_type">smartphone</field>
+        <field name="sequence">8</field>
+    </record>
+    <record model="device.capacity" id="inconnu_smartphone" forcecreate="True">
+        <field name="name">Inconnu</field>
+        <field name="default_code">inconnu</field>
+        <field name="value">Inconnu</field>
+        <field name="device_type">smartphone</field>
+        <field name="sequence">9</field>
+    </record>
+
+    <!-- TABLET CAPACITIES: 16 Go, 32 Go, 64 Go, 128 Go, 256 Go, 512 Go, 1 To, 2 To, Inconnu -->
+    <record model="device.capacity" id="16go_tablet" forcecreate="True">
+        <field name="name">16 Go</field>
+        <field name="default_code">16go</field>
+        <field name="value">16 Go</field>
+        <field name="device_type">tablet</field>
+        <field name="sequence">1</field>
+    </record>
+    <record model="device.capacity" id="32go_tablet" forcecreate="True">
+        <field name="name">32 Go</field>
+        <field name="default_code">32go</field>
+        <field name="value">32 Go</field>
+        <field name="device_type">tablet</field>
+        <field name="sequence">2</field>
+    </record>
+    <record model="device.capacity" id="64go_tablet" forcecreate="True">
+        <field name="name">64 Go</field>
+        <field name="default_code">64go</field>
+        <field name="value">64 Go</field>
+        <field name="device_type">tablet</field>
+        <field name="sequence">3</field>
+    </record>
+    <record model="device.capacity" id="128go_tablet" forcecreate="True">
+        <field name="name">128 Go</field>
+        <field name="default_code">128go</field>
+        <field name="value">128 Go</field>
+        <field name="device_type">tablet</field>
+        <field name="sequence">4</field>
+    </record>
+    <record model="device.capacity" id="256go_tablet" forcecreate="True">
+        <field name="name">256 Go</field>
+        <field name="default_code">256go</field>
+        <field name="value">256 Go</field>
+        <field name="device_type">tablet</field>
+        <field name="sequence">5</field>
+    </record>
+    <record model="device.capacity" id="512go_tablet" forcecreate="True">
+        <field name="name">512 Go</field>
+        <field name="default_code">512go</field>
+        <field name="value">512 Go</field>
+        <field name="device_type">tablet</field>
+        <field name="sequence">6</field>
+    </record>
+    <record model="device.capacity" id="1to_tablet" forcecreate="True">
+        <field name="name">1 To</field>
+        <field name="default_code">1to</field>
+        <field name="value">1 To</field>
+        <field name="device_type">tablet</field>
+        <field name="sequence">7</field>
+    </record>
+    <record model="device.capacity" id="2to_tablet" forcecreate="True">
+        <field name="name">2 To</field>
+        <field name="default_code">2to</field>
+        <field name="value">2 To</field>
+        <field name="device_type">tablet</field>
+        <field name="sequence">8</field>
+    </record>
+    <record model="device.capacity" id="inconnu_tablet" forcecreate="True">
+        <field name="name">Inconnu</field>
+        <field name="default_code">inconnu</field>
+        <field name="value">Inconnu</field>
+        <field name="device_type">tablet</field>
+        <field name="sequence">9</field>
+    </record>
+
+    <!-- LAPTOP CAPACITIES: 64 Go, 128 Go, 250 Go, 256 Go, 320 Go, 500 Go, 512 Go, 1 To, 2 To, 4 To, Inconnu -->
+    <record model="device.capacity" id="64go_laptop" forcecreate="True">
+        <field name="name">64 Go</field>
+        <field name="default_code">64go</field>
+        <field name="value">64 Go</field>
+        <field name="device_type">laptop</field>
+        <field name="sequence">1</field>
+    </record>
+    <record model="device.capacity" id="128go_laptop" forcecreate="True">
+        <field name="name">128 Go</field>
+        <field name="default_code">128go</field>
+        <field name="value">128 Go</field>
+        <field name="device_type">laptop</field>
+        <field name="sequence">2</field>
+    </record>
+    <record model="device.capacity" id="250go" forcecreate="True">
+        <field name="name">250 Go</field>
+        <field name="default_code">250go</field>
+        <field name="value">250 Go</field>
+        <field name="device_type">laptop</field>
+        <field name="sequence">3</field>
+    </record>
+    <record model="device.capacity" id="256go_laptop" forcecreate="True">
+        <field name="name">256 Go</field>
+        <field name="default_code">256go</field>
+        <field name="value">256 Go</field>
+        <field name="device_type">laptop</field>
+        <field name="sequence">4</field>
+    </record>
+    <record model="device.capacity" id="320go" forcecreate="True">
+        <field name="name">320 Go</field>
+        <field name="default_code">320go</field>
+        <field name="value">320 Go</field>
+        <field name="device_type">laptop</field>
+        <field name="sequence">5</field>
+    </record>
+    <record model="device.capacity" id="500go" forcecreate="True">
+        <field name="name">500 Go</field>
+        <field name="default_code">500go</field>
+        <field name="value">500 Go</field>
+        <field name="device_type">laptop</field>
+        <field name="sequence">6</field>
+    </record>
+    <record model="device.capacity" id="512go_laptop" forcecreate="True">
+        <field name="name">512 Go</field>
+        <field name="default_code">512go</field>
+        <field name="value">512 Go</field>
+        <field name="device_type">laptop</field>
+        <field name="sequence">7</field>
+    </record>
+    <record model="device.capacity" id="1to_laptop" forcecreate="True">
+        <field name="name">1 To</field>
+        <field name="default_code">1to</field>
+        <field name="value">1 To</field>
+        <field name="device_type">laptop</field>
+        <field name="sequence">8</field>
+    </record>
+    <record model="device.capacity" id="2to_laptop" forcecreate="True">
+        <field name="name">2 To</field>
+        <field name="default_code">2to</field>
+        <field name="value">2 To</field>
+        <field name="device_type">laptop</field>
+        <field name="sequence">9</field>
+    </record>
+    <record model="device.capacity" id="4to" forcecreate="True">
+        <field name="name">4 To</field>
+        <field name="default_code">4to</field>
+        <field name="value">4 To</field>
+        <field name="device_type">laptop</field>
+        <field name="sequence">10</field>
+    </record>
+    <record model="device.capacity" id="inconnu_laptop" forcecreate="True">
+        <field name="name">Inconnu</field>
+        <field name="default_code">inconnu</field>
+        <field name="value">Inconnu</field>
+        <field name="device_type">laptop</field>
+        <field name="sequence">11</field>
+    </record>
+
+
+    <!-- SMARTPHONE COLORS: Noir, Blanc, Gris, Argent, Or, Or Rose, Bleu, Rouge, Vert, Violet, Rose, Jaune, Orange, Crème, Titane, Bronze, Autre -->
+    <record model="device.color" id="noir_smartphone" forcecreate="True">
+        <field name="name">Noir</field>
+        <field name="default_code">noir</field>
+        <field name="value">Noir</field>
+        <field name="device_type">smartphone</field>
+        <field name="sequence">1</field>
+    </record>
+    <record model="device.color" id="blanc_smartphone" forcecreate="True">
+        <field name="name">Blanc</field>
+        <field name="default_code">blanc</field>
+        <field name="value">Blanc</field>
+        <field name="device_type">smartphone</field>
+        <field name="sequence">2</field>
+    </record>
+    <record model="device.color" id="gris_smartphone" forcecreate="True">
+        <field name="name">Gris</field>
+        <field name="default_code">gris</field>
+        <field name="value">Gris</field>
+        <field name="device_type">smartphone</field>
+        <field name="sequence">3</field>
+    </record>
+    <record model="device.color" id="argent_smartphone" forcecreate="True">
+        <field name="name">Argent</field>
+        <field name="default_code">argent</field>
+        <field name="value">Argent</field>
+        <field name="device_type">smartphone</field>
+        <field name="sequence">4</field>
+    </record>
+    <record model="device.color" id="or_smartphone" forcecreate="True">
+        <field name="name">Or</field>
+        <field name="default_code">or</field>
+        <field name="value">Or</field>
+        <field name="device_type">smartphone</field>
+        <field name="sequence">5</field>
+    </record>
+    <record model="device.color" id="or_rose_smartphone" forcecreate="True">
+        <field name="name">Or Rose</field>
+        <field name="default_code">or_rose</field>
+        <field name="value">Or Rose</field>
+        <field name="device_type">smartphone</field>
+        <field name="sequence">6</field>
+    </record>
+    <record model="device.color" id="bleu_smartphone" forcecreate="True">
+        <field name="name">Bleu</field>
+        <field name="default_code">bleu</field>
+        <field name="value">Bleu</field>
+        <field name="device_type">smartphone</field>
+        <field name="sequence">7</field>
+    </record>
+    <record model="device.color" id="rouge_smartphone" forcecreate="True">
+        <field name="name">Rouge</field>
+        <field name="default_code">rouge</field>
+        <field name="value">Rouge</field>
+        <field name="device_type">smartphone</field>
+        <field name="sequence">8</field>
+    </record>
+    <record model="device.color" id="vert_smartphone" forcecreate="True">
+        <field name="name">Vert</field>
+        <field name="default_code">vert</field>
+        <field name="value">Vert</field>
+        <field name="device_type">smartphone</field>
+        <field name="sequence">9</field>
+    </record>
+    <record model="device.color" id="violet_smartphone" forcecreate="True">
+        <field name="name">Violet</field>
+        <field name="default_code">violet</field>
+        <field name="value">Violet</field>
+        <field name="device_type">smartphone</field>
+        <field name="sequence">10</field>
+    </record>
+    <record model="device.color" id="rose_smartphone" forcecreate="True">
+        <field name="name">Rose</field>
+        <field name="default_code">rose</field>
+        <field name="value">Rose</field>
+        <field name="device_type">smartphone</field>
+        <field name="sequence">11</field>
+    </record>
+    <record model="device.color" id="jaune_smartphone" forcecreate="True">
+        <field name="name">Jaune</field>
+        <field name="default_code">jaune</field>
+        <field name="value">Jaune</field>
+        <field name="device_type">smartphone</field>
+        <field name="sequence">12</field>
+    </record>
+    <record model="device.color" id="orange_smartphone" forcecreate="True">
+        <field name="name">Orange</field>
+        <field name="default_code">orange</field>
+        <field name="value">Orange</field>
+        <field name="device_type">smartphone</field>
+        <field name="sequence">13</field>
+    </record>
+    <record model="device.color" id="creme_smartphone" forcecreate="True">
+        <field name="name">Crème</field>
+        <field name="default_code">creme</field>
+        <field name="value">Crème</field>
+        <field name="device_type">smartphone</field>
+        <field name="sequence">14</field>
+    </record>
+    <record model="device.color" id="titane_smartphone" forcecreate="True">
+        <field name="name">Titane</field>
+        <field name="default_code">titane</field>
+        <field name="value">Titane</field>
+        <field name="device_type">smartphone</field>
+        <field name="sequence">15</field>
+    </record>
+    <record model="device.color" id="bronze_smartphone" forcecreate="True">
+        <field name="name">Bronze</field>
+        <field name="default_code">bronze</field>
+        <field name="value">Bronze</field>
+        <field name="device_type">smartphone</field>
+        <field name="sequence">16</field>
+    </record>
+    <record model="device.color" id="autre_smartphone" forcecreate="True">
+        <field name="name">Autre</field>
+        <field name="default_code">autre</field>
+        <field name="value">Autre</field>
+        <field name="device_type">smartphone</field>
+        <field name="sequence">17</field>
+    </record>
+
+
+    <!-- TABLET COLORS: Noir, Blanc, Gris, Argent, Or, Or Rose, Bleu, Rose, Vert, Violet, Autre -->
+    <record model="device.color" id="noir_tablet" forcecreate="True">
+        <field name="name">Noir</field>
+        <field name="default_code">noir</field>
+        <field name="value">Noir</field>
+        <field name="device_type">tablet</field>
+        <field name="sequence">1</field>
+    </record>
+    <record model="device.color" id="blanc_tablet" forcecreate="True">
+        <field name="name">Blanc</field>
+        <field name="default_code">blanc</field>
+        <field name="value">Blanc</field>
+        <field name="device_type">tablet</field>
+        <field name="sequence">2</field>
+    </record>
+    <record model="device.color" id="gris_tablet" forcecreate="True">
+        <field name="name">Gris</field>
+        <field name="default_code">gris</field>
+        <field name="value">Gris</field>
+        <field name="device_type">tablet</field>
+        <field name="sequence">3</field>
+    </record>
+    <record model="device.color" id="argent_tablet" forcecreate="True">
+        <field name="name">Argent</field>
+        <field name="default_code">argent</field>
+        <field name="value">Argent</field>
+        <field name="device_type">tablet</field>
+        <field name="sequence">4</field>
+    </record>
+    <record model="device.color" id="or_tablet" forcecreate="True">
+        <field name="name">Or</field>
+        <field name="default_code">or</field>
+        <field name="value">Or</field>
+        <field name="device_type">tablet</field>
+        <field name="sequence">5</field>
+    </record>
+    <record model="device.color" id="or_rose_tablet" forcecreate="True">
+        <field name="name">Or Rose</field>
+        <field name="default_code">or_rose</field>
+        <field name="value">Or Rose</field>
+        <field name="device_type">tablet</field>
+        <field name="sequence">6</field>
+    </record>
+    <record model="device.color" id="bleu_tablet" forcecreate="True">
+        <field name="name">Bleu</field>
+        <field name="default_code">bleu</field>
+        <field name="value">Bleu</field>
+        <field name="device_type">tablet</field>
+        <field name="sequence">7</field>
+    </record>
+    <record model="device.color" id="rose_tablet" forcecreate="True">
+        <field name="name">Rose</field>
+        <field name="default_code">rose</field>
+        <field name="value">Rose</field>
+        <field name="device_type">tablet</field>
+        <field name="sequence">8</field>
+    </record>
+    <record model="device.color" id="vert_tablet" forcecreate="True">
+        <field name="name">Vert</field>
+        <field name="default_code">vert</field>
+        <field name="value">Vert</field>
+        <field name="device_type">tablet</field>
+        <field name="sequence">9</field>
+    </record>
+    <record model="device.color" id="violet_tablet" forcecreate="True">
+        <field name="name">Violet</field>
+        <field name="default_code">violet</field>
+        <field name="value">Violet</field>
+        <field name="device_type">tablet</field>
+        <field name="sequence">10</field>
+    </record>
+    <record model="device.color" id="autre_tablet" forcecreate="True">
+        <field name="name">Autre</field>
+        <field name="default_code">autre</field>
+        <field name="value">Autre</field>
+        <field name="device_type">tablet</field>
+        <field name="sequence">11</field>
+    </record>
+
+    <!-- LAPTOP COLORS: Noir, Gris, Argent, Blanc, Bleu, Or, Or Rose, Rouge, Autre -->
+    <record model="device.color" id="noir_laptop" forcecreate="True">
+        <field name="name">Noir</field>
+        <field name="default_code">noir</field>
+        <field name="value">Noir</field>
+        <field name="device_type">laptop</field>
+        <field name="sequence">1</field>
+    </record>
+    <record model="device.color" id="gris_laptop" forcecreate="True">
+        <field name="name">Gris</field>
+        <field name="default_code">gris</field>
+        <field name="value">Gris</field>
+        <field name="device_type">laptop</field>
+        <field name="sequence">2</field>
+    </record>
+    <record model="device.color" id="argent_laptop" forcecreate="True">
+        <field name="name">Argent</field>
+        <field name="default_code">argent</field>
+        <field name="value">Argent</field>
+        <field name="device_type">laptop</field>
+        <field name="sequence">3</field>
+    </record>
+    <record model="device.color" id="blanc_laptop" forcecreate="True">
+        <field name="name">Blanc</field>
+        <field name="default_code">blanc</field>
+        <field name="value">Blanc</field>
+        <field name="device_type">laptop</field>
+        <field name="sequence">4</field>
+    </record>
+    <record model="device.color" id="bleu_laptop" forcecreate="True">
+        <field name="name">Bleu</field>
+        <field name="default_code">bleu</field>
+        <field name="value">Bleu</field>
+        <field name="device_type">laptop</field>
+        <field name="sequence">5</field>
+    </record>
+    <record model="device.color" id="or_laptop" forcecreate="True">
+        <field name="name">Or</field>
+        <field name="default_code">or</field>
+        <field name="value">Or</field>
+        <field name="device_type">laptop</field>
+        <field name="sequence">6</field>
+    </record>
+    <record model="device.color" id="or_rose_laptop" forcecreate="True">
+        <field name="name">Or Rose</field>
+        <field name="default_code">or_rose</field>
+        <field name="value">Or Rose</field>
+        <field name="device_type">laptop</field>
+        <field name="sequence">7</field>
+    </record>
+    <record model="device.color" id="rouge_laptop" forcecreate="True">
+        <field name="name">Rouge</field>
+        <field name="default_code">rouge</field>
+        <field name="value">Rouge</field>
+        <field name="device_type">laptop</field>
+        <field name="sequence">8</field>
+    </record>
+    <record model="device.color" id="autre_laptop" forcecreate="True">
+        <field name="name">Autre</field>
+        <field name="default_code">autre</field>
+        <field name="value">Autre</field>
+        <field name="device_type">laptop</field>
+        <field name="sequence">9</field>
+    </record>
+
+    <!-- SMARTWATCH COLORS: Noir, Argent, Gris, Or, Or Rose, Bleu, Rouge, Vert, Blanc, Titane, Autre -->
+    <record model="device.color" id="noir_smartwatch" forcecreate="True">
+        <field name="name">Noir</field>
+        <field name="default_code">noir</field>
+        <field name="value">Noir</field>
+        <field name="device_type">smartwatch</field>
+        <field name="sequence">1</field>
+    </record>
+    <record model="device.color" id="argent_smartwatch" forcecreate="True">
+        <field name="name">Argent</field>
+        <field name="default_code">argent</field>
+        <field name="value">Argent</field>
+        <field name="device_type">smartwatch</field>
+        <field name="sequence">2</field>
+    </record>
+    <record model="device.color" id="gris_smartwatch" forcecreate="True">
+        <field name="name">Gris</field>
+        <field name="default_code">gris</field>
+        <field name="value">Gris</field>
+        <field name="device_type">smartwatch</field>
+        <field name="sequence">3</field>
+    </record>
+    <record model="device.color" id="or_smartwatch" forcecreate="True">
+        <field name="name">Or</field>
+        <field name="default_code">or</field>
+        <field name="value">Or</field>
+        <field name="device_type">smartwatch</field>
+        <field name="sequence">4</field>
+    </record>
+    <record model="device.color" id="or_rose_smartwatch" forcecreate="True">
+        <field name="name">Or Rose</field>
+        <field name="default_code">or_rose</field>
+        <field name="value">Or Rose</field>
+        <field name="device_type">smartwatch</field>
+        <field name="sequence">5</field>
+    </record>
+    <record model="device.color" id="bleu_smartwatch" forcecreate="True">
+        <field name="name">Bleu</field>
+        <field name="default_code">bleu</field>
+        <field name="value">Bleu</field>
+        <field name="device_type">smartwatch</field>
+        <field name="sequence">6</field>
+    </record>
+    <record model="device.color" id="rouge_smartwatch" forcecreate="True">
+        <field name="name">Rouge</field>
+        <field name="default_code">rouge</field>
+        <field name="value">Rouge</field>
+        <field name="device_type">smartwatch</field>
+        <field name="sequence">7</field>
+    </record>
+    <record model="device.color" id="vert_smartwatch" forcecreate="True">
+        <field name="name">Vert</field>
+        <field name="default_code">vert</field>
+        <field name="value">Vert</field>
+        <field name="device_type">smartwatch</field>
+        <field name="sequence">8</field>
+    </record>
+    <record model="device.color" id="blanc_smartwatch" forcecreate="True">
+        <field name="name">Blanc</field>
+        <field name="default_code">blanc</field>
+        <field name="value">Blanc</field>
+        <field name="device_type">smartwatch</field>
+        <field name="sequence">9</field>
+    </record>
+    <record model="device.color" id="titane_smartwatch" forcecreate="True">
+        <field name="name">Titane</field>
+        <field name="default_code">titane</field>
+        <field name="value">Titane</field>
+        <field name="device_type">smartwatch</field>
+        <field name="sequence">10</field>
+    </record>
+    <record model="device.color" id="autre_smartwatch" forcecreate="True">
+        <field name="name">Autre</field>
+        <field name="default_code">autre</field>
+        <field name="value">Autre</field>
+        <field name="device_type">smartwatch</field>
+        <field name="sequence">11</field>
+    </record>
+</odoo>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <!-- color states -->
+    <record id="state_helper_1" model="repair.state.helper">
+        <field name="name">To be diagnosed</field>
+        <field name="color">1</field>
+        <field name="sequence">1</field>
+    </record>
+
+    <record id="state_helper_2" model="repair.state.helper">
+        <field name="name">Quotation Validation</field>
+        <field name="color">2</field>
+        <field name="sequence">2</field>
+    </record>
+
+    <record id="state_helper_3" model="repair.state.helper">
+        <field name="name">Waiting For Parts</field>
+        <field name="color">3</field>
+        <field name="sequence">3</field>
+    </record>
+
+    <record id="state_helper_4" model="repair.state.helper">
+        <field name="name">Under Repair</field>
+        <field name="color">4</field>
+        <field name="sequence">4</field>
+    </record>
+
+    <record id="state_helper_5" model="repair.state.helper">
+        <field name="name">Ready / Awaiting customer</field>
+        <field name="color">5</field>
+        <field name="sequence">5</field>
+    </record>
+
+    <record id="state_helper_6" model="repair.state.helper">
+        <field name="name">Completed / Returned</field>
+        <field name="color">6</field>
+        <field name="sequence">6</field>
+    </record>
+
+    <record id="state_helper_7" model="repair.state.helper">
+        <field name="name">Cancelled / Not repairable</field>
+        <field name="color">7</field>
+        <field name="sequence">7</field>
+    </record>
+</odoo>

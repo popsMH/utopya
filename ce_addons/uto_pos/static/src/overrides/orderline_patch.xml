@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="uto_pos.Orderline" t-inherit="point_of_sale.Orderline" t-inherit-mode="extension">
+
+        <!--
+            Supprime "/ Unité(s)" sur les lignes produit.
+            1. On retire le "/" de la fin du bloc t-if="!props.basic_receipt"
+            2. On supprime le <t t-esc="line.unit"> qui suit
+        -->
+        <xpath expr="//t[@t-if='!props.basic_receipt']" position="replace">
+            <t t-if="!props.basic_receipt">
+                x
+                <t t-if="line.price !== 0">
+                    <s t-esc="line.oldUnitPrice" t-if="line.oldUnitPrice" />
+                    <t t-esc="line.unitPrice" />
+                </t>
+            </t>
+        </xpath>
+
+        <xpath expr="//t[@t-if='line.unit'][@t-esc='line.unit']" position="replace"/>
+
+    </t>
+
+</templates>

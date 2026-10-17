@@ -1,0 +1,80 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* uto_apis
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0+e-20250203\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-13 11:18+0000\n"
+"PO-Revision-Date: 2025-11-13 11:18+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: uto_apis
+#. odoo-python
+#: code:uto_apis/controllers/main.py:0
+msgid "Ecologic API Information is missing in the settings"
+msgstr "Les informations de l'API Ecologic sont manquantes dans les paramètres"
+
+#. module: uto_apis
+#. odoo-python
+#: code:uto_apis/controllers/main.py:0
+msgid "Ecologic API error: %s"
+msgstr "Erreur de l'API Ecologic : %s"
+
+#. module: uto_apis
+#: model:ir.model.fields,field_description:uto_apis.field_res_config_settings__ecologic_api_url
+msgid "Ecologic API URL"
+msgstr "URL API Ecologic"
+
+#. module: uto_apis
+#: model:ir.model.fields,field_description:uto_apis.field_res_config_settings__ecologic_api_key
+msgid "Ecologic API Key"
+msgstr "Clé API Ecologic"
+
+#. module: uto_apis
+#: model_terms:ir.ui.view,arch_db:uto_apis.res_config_settings_view_form
+msgid "Ecologic API"
+msgstr "API Ecologic"
+
+#. module: uto_apis
+#: model_terms:ir.ui.view,arch_db:uto_apis.res_config_settings_view_form
+msgid "Ecologic API URL"
+msgstr "URL de l'API Ecologic"
+
+#. module: uto_apis
+#. odoo-python
+#: code:uto_apis/controllers/main.py:0
+msgid "Ecosystem API Information is missing in the settings"
+msgstr "Les informations de l'API Ecosystem sont manquantes dans les paramètres"
+
+#. module: uto_apis
+#. odoo-python
+#: code:uto_apis/controllers/main.py:0
+msgid "Ecosystem API error: %s"
+msgstr "Erreur de l'API Ecosystem : %s"
+
+#. module: uto_apis
+#: model:ir.model.fields,field_description:uto_apis.field_res_config_settings__ecosystem_api_url
+msgid "Ecosystem API URL"
+msgstr "URL API Ecosystem"
+
+#. module: uto_apis
+#: model:ir.model.fields,field_description:uto_apis.field_res_config_settings__ecosystem_api_username
+msgid "Ecosystem API Username"
+msgstr "Nom d'utilisateur de l'API Ecosystem"
+
+#. module: uto_apis
+#: model:ir.model.fields,field_description:uto_apis.field_res_config_settings__ecosystem_api_password
+msgid "Ecosystem API Password"
+msgstr "Mot de passe de l'API Ecosystem"
+
+#. module: uto_apis
+#: model_terms:ir.ui.view,arch_db:uto_apis.res_config_settings_view_form
+msgid "Ecosystem API"
+msgstr "API Ecosystem"

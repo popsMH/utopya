@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="uto_pos.OrderReceipt" t-inherit="point_of_sale.OrderReceipt" t-inherit-mode="extension">
+
+        <!-- Marque blanche : "Powered by Odoo" → "Propulsé par Optilane" -->
+        <xpath expr="//p[text()='Powered by Odoo']" position="replace">
+            <p>Propulsé par Optilane</p>
+        </xpath>
+
+        <!-- Sémantique : "00026-001-0002" → "Ticket N° 00026-001-0002" -->
+        <xpath expr="//div[@t-esc='props.data.name']" position="replace">
+            <div>Ticket N° <t t-esc="props.data.name" /></div>
+        </xpath>
+
+    </t>
+
+</templates>

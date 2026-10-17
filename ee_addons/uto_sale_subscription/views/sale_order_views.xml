@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_res_partner_form_inherit_cpts" model="ir.ui.view">
+        <field name="name">view.sale.order.subscription.form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale_subscription.sale_subscription_order_view_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//label[@name='plan_label']" position="before">
+                <field name="subscription_offer_type" widget="radio" options="{'horizontal': True}" invisible="not is_subscription"/>
+                <field name="related_community_company_id" readonly="1" invisible="1"/>
+                <field name="related_community_user_id" readonly="1" invisible="1"/>
+                <!-- <div name="options">
+                    <span class="d-inline-flex">
+                        <field name="is_standard"/>
+                        <label for="is_standard"/>
+                    </span>
+                    <span class="d-inline-flex">
+                        <field name="is_premium"/>
+                        <label for="is_premium"/>
+                    </span>
+                </div><br/> -->
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- catalog -->
+    <record id="view_catalog_catalog_form" model="ir.ui.view">
+        <field name="name">catalog.catalog.form</field>
+        <field name="model">catalog.catalog</field>
+        <field name="arch" type="xml">
+            <form string="Catalog" delete="1" duplicate="1" create="1">
+                <sheet>
+                    <group>
+                        <field name="name" />
+                        <field name="is_available_for_repair"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_catalog_catalog_list" model="ir.ui.view">
+        <field name="name">catalog.catalog.list</field>
+        <field name="model">catalog.catalog</field>
+        <field name="arch" type="xml">
+            <list string="Catalog" delete="1" duplicate="1" edit="0" create="1">
+                <field name="name"/>
+                <field name="is_available_for_repair"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_catalog_catalog_search" model="ir.ui.view">
+        <field name="name">catalog.catalog.search</field>
+        <field name="model">catalog.catalog</field>
+        <field name="arch" type="xml">
+            <search string="Catalog">
+                <field name="name"/>
+                <field name="is_available_for_repair"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_catalog_catalog" model="ir.actions.act_window">
+        <field name="name">Catalog</field>
+        <field name="res_model">catalog.catalog</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+            Create a new Catalog
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="repair_menu_catalog_catalog" name="Catalog" parent="repair.repair_menu_config" action="action_catalog_catalog" sequence="101"/>
+
+    <!-- action server -->
+    <record model="ir.actions.server" id="action_make_available_for_repair">
+        <field name="name">Show or Hide in repair order</field>
+        <field name="model_id" ref="uto_repair.model_catalog_catalog"/>
+        <field name="binding_model_id" ref="uto_repair.model_catalog_catalog"/>
+        <field name="state">code</field>
+        <field name="code">
+            if records:
+                action = records._make_it_available_for_repair()
+        </field>
+    </record>
+
+</odoo>

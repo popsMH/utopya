@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.extent.community.apis</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="997"/>
+        <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//app[@name='general_settings']//block[@name='companies_setting_container']" position="after">
+
+                <block title="API URL" name="eco_api_config">
+                    <setting string="Ecosystem" help="Ecosystem API URL" id="ecosystem_api_url">
+                        <field name="ecosystem_api_url" />
+                    </setting>
+                    <setting>
+                        <span></span>
+                    </setting>
+                    <setting string="Ecologic" help="Ecologic API URL" id="ecologic_api_url">
+                        <field name="ecologic_api_url" />
+                    </setting>
+                </block>
+
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

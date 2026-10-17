@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <record id="view_repair_order_form_inherit" model="ir.ui.view">
+        <field name="name">repair.form.inherit</field>
+        <field name="model">repair.order</field>
+        <field name="inherit_id" ref="repair.view_repair_order_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='priority']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='user_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='tag_ids']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='schedule_date']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//sheet/group" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//sheet/group" position="after">
+                <group>
+                    <!-- Bloc 1: Le Client -->
+                    <group string="Client" name="client_group">
+                        <field name="partner_id" />
+                        <field name="contact_phone" />
+                    </group>
+                    
+                    <!-- Bloc 2: Info concernant les dates planifiées et company -->
+                    <group string="Information" name="info_group">
+                        <field name="schedule_date_date" />
+                        <field name="repair_end_date" invisible="not is_ro_repaired" />
+                        <field name="company_id" />
+                    </group>
+                    
+                    <!-- Bloc 3: L'Appareil (Ordre strict exigé) -->
+                    <group string="Device" name="device_group">
+                        <field name="catalog_id" readonly="is_ro_repaired or is_ro_done or is_ro_cancelled" options="{'no_create': True}" invisible="1" />
+                        <field name="catalog_catalog_id" readonly="is_ro_repaired or is_ro_done or is_ro_cancelled" options="{'no_create': True}" />
+                        <field name="other_product_to_repair" readonly="is_ro_repaired or is_ro_done or is_ro_cancelled" />
+                        <field name="complement_repair_product" invisible="not other_product_to_repair" readonly="is_ro_repaired or is_ro_done or is_ro_cancelled" />
+                        <field name="device_type" readonly="is_ro_repaired or is_ro_done or is_ro_cancelled" invisible="1" />
+                        <field name="brand_brand_id" readonly="is_ro_repaired or is_ro_done or is_ro_cancelled" options="{'no_create': True}" />
+                        <field name="commercial_reference_id" readonly="is_ro_repaired or is_ro_done or is_ro_cancelled" options="{'no_create': True}" />
+                        <field name="device_color_id" readonly="is_ro_repaired or is_ro_done or is_ro_cancelled" options="{'no_create': True}" invisible="not device_type" />
+                        <field name="device_capacity_id" readonly="is_ro_repaired or is_ro_done or is_ro_cancelled" options="{'no_create': True}" invisible="not device_type" />
+                        <field name="product_to_repair_type" invisible="1" />
+                        <field name="is_phone" invisible="1" />
+                        <field name="catalog_domain_ids" invisible="1" />
+                        <field name="code_domain_ids" invisible="1" />
+                        <field name="repair_code_id" domain="code_domain_ids" readonly="is_ro_repaired or is_ro_done or is_ro_cancelled" options="{'no_create': True}" invisible="1" />
+                        <field name="repair_brand_id" domain="catalog_domain_ids" readonly="is_ro_repaired or is_ro_done or is_ro_cancelled" options="{'no_create': True}" invisible="1" />
+                        <field name="device_id" readonly="is_ro_repaired or is_ro_done or is_ro_cancelled" />
+                        <field name="iris_section" readonly="1" invisible="1" />
+                        <field name="assigned_technician" readonly="is_ro_repaired or is_ro_done or is_ro_cancelled" invisible="1" />
+                        <field name="unlock_code" readonly="is_ro_repaired or is_ro_done or is_ro_cancelled" />
+                        <field name="code_code_id" readonly="is_ro_repaired or is_ro_done or is_ro_cancelled" options="{'no_create': True}" />
+                    </group>
+                    
+                    <!-- Bloc 4: Diagnostic & Accessoires -->
+                    <group string="Diagnostic and Accessories" name="diagnostic_group">
+                        <field name="failure_description" readonly="is_ro_repaired or is_ro_done or is_ro_cancelled" invisible="product_to_repair_type != 'ecologic'" />
+                        <field name="is_phone_case" readonly="is_ro_repaired or is_ro_done or is_ro_cancelled" widget="boolean_toggle" />
+                        <field name="is_cable" readonly="is_ro_repaired or is_ro_done or is_ro_cancelled" widget="boolean_toggle" />
+                        <field name="if_eligible" readonly="is_ro_repaired or is_ro_done or is_ro_cancelled" widget="boolean_toggle" />
+                        <field name="nameplate_photo" invisible="not if_eligible" class="oe_avatar" widget="image" readonly="is_ro_repaired or is_ro_done or is_ro_cancelled" />
+                        <field name="piece_of_evidence_filename" invisible="1" />
+                        <field name="piece_of_evidence_file" 
+                            filename="piece_of_evidence_filename" 
+                            widget="binary" 
+                            invisible="product_to_repair_type != 'ecologic' or not if_eligible" 
+                            required="product_to_repair_type == 'ecologic' and if_eligible" 
+                            readonly="is_ro_repaired or is_ro_done or is_ro_cancelled"
+                        />
+                    </group>
+                </group>
+                
+                <!-- Bloc 5: Notes & Photos d'intervention (Full Width) -->
+                <group string="Notes and Photos" name="notes_group" colspan="2">
+                    <field name="internal_notes" string="Notes and intervention photos" placeholder="Add internal notes." />
+                    <field name="visual_condition" readonly="is_ro_repaired or is_ro_done or is_ro_cancelled" />
+                </group>
+
+                <!-- Bloc 6: Certificat d'Irréparabilité -->
+                <group string="Certificat d'Irréparabilité" name="irreparability_group" invisible="not motif_irreparabilite">
+                    <field name="motif_irreparabilite" readonly="1" />
+                    <field name="motif_irreparabilite_autre" readonly="1" />
+                    <field name="date_certificat_irreparabilite" readonly="1" />
+                </group>
+
+                <group string="Reimbursement Claim Section" invisible="not if_eligible or product_to_repair_type == 'ecologic'">
+                    <group string="General">
+                        <field name="reimbursement_claim_id" />
+                        <field name="sap_service_order" />
+                        <field name="ecosystem_request_status" />
+                        <field name="is_claim_confirmed_and_verified" />
+                        <field name="claim_creation_date" readonly="1" />
+                        <field name="claim_organization" readonly="1" />
+                        <field name="reimbursement_claim_state" readonly="1" />
+                        <field name="eventual_comments" />
+                    </group>
+                    <group string="Files">
+                        <field name="invoice_file_uploaded" />
+                        <field name="serial_tag_file_uploaded" />
+                        <field name="claim_request_file_uploaded" />
+                        <field name="device_picture_file_uploaded" />
+                    </group>
+                </group>
+                <group string="Reimbursement Claim Section" invisible="not if_eligible or product_to_repair_type == 'ecosystem'">
+                    <group string="General">
+                        <field name="claim_id" />
+                        <field name="is_valid" />
+                        <field name="is_submitted" />
+                        <field name="claim_creation_date" readonly="1" />
+                        <field name="claim_organization" readonly="1" />
+                        <field name="reimbursement_claim_state" readonly="1" />
+                        <field name="eventual_comments" />
+                    </group>
+                    <group string="Files">
+                        <field name="invoice_uploaded" />
+                        <field name="name_plate_uploaded" />
+                        <field name="device_picture_uploaded" />
+                        <field name="piece_of_evidence_uploaded" />
+                    </group>
+                </group>
+            </xpath>
+
+            <xpath expr="//page[@name='repair_notes']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='partner_id']" position="attributes">
+                <attribute name="domain">[('company_id', '=', company_id)]</attribute>
+                <attribute name="options">{'no_quick_create': True}</attribute>
+                <attribute name="context">{
+                    'res_partner_search_mode': 'customer', 
+                    'show_phone_and_email': True,
+                    'default_customer_rank': 1,
+                }</attribute>
+            </xpath>
+
+            <xpath expr="//page[@name='page_miscellaneous']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='product_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='reserve_visible']" position="after">
+                <field name="is_claim_created" invisible="1" />
+                <field name="is_claim_confirmed" invisible="1" />
+                <field name="are_files_uploaded" invisible="1" />
+            </xpath>
+
+            <xpath expr="//form/header" position="replace">
+                <header>
+                    <button name="action_validate_repair"
+                        type="object"
+                        string="Validate"
+                        class="oe_highlight"
+                        invisible="not show_validate_button"/>
+
+                    <button name="action_mark_as_done_repair"
+                        type="object"
+                        string="Mark As Done"
+                        class="oe_highlight"
+                        invisible="not show_mark_as_done_button"/>
+                        
+                    <button name="action_create_sale_order"
+                        type="object"
+                        string="Create Quotation"
+                        invisible="not show_create_so_button or sale_order_id"/>
+
+                    <button name="action_open_irreparability_wizard"
+                        type="object"
+                        string="Générer Certificat Irréparabilité"
+                        class="oe_highlight"
+                        invisible="not show_validate_button"/>
+
+                    <button name="action_cancel_ro"
+                        type="object"
+                        string="Cancel"
+                        invisible="is_ro_cancelled"/>
+                    
+                    <button name="action_reset_to_draft_ro"
+                        type="object"
+                        string="Reset to Draft"
+                        invisible="not is_ro_cancelled"/>
+
+                    <button name="action_create_new_claim" invisible="not is_ro_repaired or is_claim_created or not if_eligible" type="object" string="Create New Claim" class="oe_highlight" />
+                    <button name="action_claim_upload_file" invisible="are_files_uploaded or not is_claim_created" type="object" string="Upload Files" class="oe_highlight" />
+                    <button name="action_confirm_claim" invisible="is_claim_confirmed or not are_files_uploaded or product_to_repair_type != 'ecosystem'" type="object" string="Confirm Claim" class="oe_highlight" />
+                    <button name="action_get_one_claim" invisible="not is_claim_confirmed or is_claim_confirmed_and_verified" type="object" string="Check Claim Status" class="oe_highlight" />
+                    <button name="action_get_claim_status_ecologic" invisible="not are_files_uploaded or product_to_repair_type != 'ecologic'" type="object" string="Check Claim Status" class="oe_highlight" />
+                    <button name="action_submit_claim_ecologic" invisible="not is_valid or is_submitted" type="object" string="Submit Claim" class="oe_highlight" />
+
+                    <field name="state_id"
+                        widget="statusbar"
+                        options="{'clickable': 1}"/>
+                    <field name="state_ids" invisible="1"/>
+                </header>
+            </xpath>
+
+            <xpath expr="//page[@name='parts']/field[@name='move_ids']/list/field[@name='repair_line_type']" position="attributes">
+                <attribute name="required">0</attribute>
+                <attribute name="column_invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//page[@name='parts']/field[@name='move_ids']/list/field[@name='picked']" position="attributes">
+                <attribute name="column_invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//page[@name='parts']/field[@name='move_ids']/list/field[@name='product_id']" position="attributes">
+                <attribute name="domain">
+                    [
+                        ('company_id', '=', parent.company_id),
+                        ('type', 'in',
+                            (repair_product_line_type == 'service' and ['service']
+                            or repair_product_line_type == 'part' and ['consu']
+                            or ['consu','service']))
+                    ]
+                </attribute>
+            </xpath>
+
+            <xpath expr="//page[@name='parts']/field[@name='move_ids']/list/field[@name='company_id']" position="before">
+                <field name="domain_ids" column_invisible="1" />
+                <field name="repair_product_line_type" />
+            </xpath>
+
+            <!-- <xpath expr="//page[@name='parts']/field[@name='move_ids']/list/field[@name='product_id']" position="attributes">
+                <attribute name="domain">domain_ids</attribute>
+            </xpath> -->
+
+            <xpath expr="//page[@name='parts']/field[@name='move_ids']/list/field[@name='quantity']" position="after">
+                <field name="currency_id" column_invisible="1" />
+                <field name="price_unit" />
+                <field name="discount" />
+                <field name="tax_id" widget="many2many_tags" options="{'no_create': True}" context="{'search_view_ref': 'account.account_tax_view_search'}" domain="[('type_tax_use', '=', 'sale')]" />
+                <field name="price_subtotal" />
+                <field name="price_tax" column_invisible="1" />
+                <field name="price_total" column_invisible="1" />
+            </xpath>
+
+            <xpath expr="//notebook" position="inside">
+                <page string="Other Info" name="other_information" invisible="1">
+                    <group>
+                        <group name="sale_info" string="Invoicing">
+                            <field name="show_update_fpos" invisible="1"/>
+                            <label for="fiscal_position_id"/>
+                            <div class="o_row">
+                                <field name="fiscal_position_id" options="{'no_create': True}"/>
+                                <button name="action_update_taxes" type="object"
+                                    string=" Update Taxes"
+                                    help="Recompute all taxes based on this fiscal position"
+                                    class="btn-link mb-1 px-0" icon="fa-refresh"
+                                    confirm="This will update all taxes based on the currently selected fiscal position."
+                                    invisible="not show_update_fpos or state in ['sale', 'cancel']"/>
+                            </div>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+
+            <xpath expr="//header" position="after">
+                <div class="alert alert-warning" role="alert"
+                    invisible="not show_customer_info_alert">
+                    <field name="customer_info_alert_message" />
+                </div>
+            </xpath>
+
+            <xpath expr="//button[@name='action_view_sale_order']/div/span[@class='o_stat_text']" position="replace">
+                <span class="o_stat_text">Quote / Invoice</span>
+            </xpath>
+
+            <xpath expr="//page[@name='parts']" position="attributes">
+                <attribute name="string">Parts and Labor</attribute>
+            </xpath>
+
+            <xpath expr="//page[@name='parts']/field[@name='move_ids']/list/field[@name='description_picking']" position="attributes">
+                <attribute name="column_invisible">True</attribute>
+            </xpath>
+
+            <xpath expr="//page[@name='parts']/field[@name='move_ids']/list/field[@name='date']" position="attributes">
+                <attribute name="column_invisible">True</attribute>
+            </xpath>
+
+            <xpath expr="//page[@name='parts']/field[@name='move_ids']/list/field[@name='date_deadline']" position="attributes">
+                <attribute name="column_invisible">True</attribute>
+            </xpath>
+
+            <xpath expr="//page[@name='parts']/field[@name='move_ids']/list/field[@name='product_uom_qty']" position="attributes">
+                <attribute name="string">Quantity</attribute>
+            </xpath>
+
+            <xpath expr="//page[@name='parts']/field[@name='move_ids']/list/button[@name='action_product_forecast_report'][1]" position="attributes">
+                <attribute name="column_invisible">True</attribute>
+            </xpath>
+
+            <xpath expr="//page[@name='parts']/field[@name='move_ids']/list/button[@name='action_product_forecast_report'][2]" position="attributes">
+                <attribute name="column_invisible">True</attribute>
+            </xpath>
+
+            <xpath expr="//page[@name='parts']/field[@name='move_ids']/list/field[@name='quantity']" position="attributes">
+                <attribute name="column_invisible">True</attribute>
+            </xpath>
+
+            <xpath expr="//page[@name='parts']/field[@name='move_ids']/list/field[@name='lot_ids']" position="attributes">
+                <attribute name="column_invisible">True</attribute>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="view_repair_order_tree_inherit" model="ir.ui.view">
+        <field name="name">repair.list.inherit</field>
+        <field name="model">repair.order</field>
+        <field name="inherit_id" ref="repair.view_repair_order_tree"/>
+        <field name="arch" type="xml">
+
+            <list position="replace">
+                <list multi_edit="0" sample="1" decoration-info="state == 'draft'" import="false">
+                    <field name="name"/>
+                    <field name="partner_id"/>
+                    <field name="catalog_catalog_id" readonly="1" />
+                    <field name="state_ids" widget="many2many_tags" options="{'color_field': 'color', 'no_create_edit': True}"/>
+                    <field name="schedule_date_date"/>
+                    <field name="reimbursement_claim_state" widget="badge" invisible="not if_eligible"/>
+                    <button name="action_print_quotation" string="Print Quotation" type="object" icon="fa-file-text-o" invisible="not sale_order_id"/>
+                </list>
+            </list>
+
+        </field>
+    </record>
+
+    <record id="view_repair_order_form_filter_inherit" model="ir.ui.view">
+        <field name="name">repair.select.inherit</field>
+        <field name="model">repair.order</field>
+        <field name="inherit_id" ref="repair.view_repair_order_form_filter"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='product_id']" position="after">
+                <field name="catalog_catalog_id" />
+            </xpath>
+
+            <xpath expr="//filter[@name='filter_draft']" position="replace">
+                <filter string="New" domain="[('state_id.sequence', '=', 1)]" name="filter_draft" />
+            </xpath>
+
+            <xpath expr="//filter[@name='filter_draft']" position="after">
+                <filter string="Waiting" domain="[('state_id.sequence', 'in', (2, 3))]" name="filter_waiting" />
+            </xpath>
+
+            <xpath expr="//filter[@name='filter_under_repair']" position="replace">
+                <filter string="Under Repair" domain="[('state_id.sequence', '=', 4)]" name="filter_under_repair" />
+            </xpath>
+
+            <xpath expr="//filter[@name='filter_done']" position="replace">
+                <filter string="Repaired" domain="[('state_id.sequence', '=', 5)]" name="filter_repaired" />
+                <filter string="Done" domain="[('state_id.sequence', '=', 6)]" name="filter_done" />
+            </xpath>
+
+            <xpath expr="//filter[@name='filter_cancel']" position="replace">
+                <filter string="Cancelled" domain="[('state_id.sequence', '=', 7)]" name="filter_cancel" />
+            </xpath>
+
+            <xpath expr="//filter[@name='filter_confirmed']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//filter[@name='returned']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//filter[@name='ready']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//filter[@name='filter_late']" position="replace">
+                <filter string="Late" name="filter_late" domain="[('state_id.sequence', 'not in', (1, 5, 6, 7)), ('schedule_date_date', '&lt;', context_today())]"/>
+            </xpath>
+
+            <xpath expr="//group/filter[@name='product']" position="replace">
+                <filter string="Product" name="product" domain="[]" context="{'group_by': 'catalog_catalog_id'}"/>
+            </xpath>
+
+            <xpath expr="//group/filter[@name='status']" position="replace">
+                <filter string="Status" name="status" domain="[]" context="{'group_by': 'state_id'}"/>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="repair.action_repair_order_tree" model="ir.actions.act_window">
+        <field name="name">Repairs</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record model="ir.ui.menu" id="repair.menu_repair_order">
+        <field name="sequence">4</field>
+    </record>
+
+</odoo>

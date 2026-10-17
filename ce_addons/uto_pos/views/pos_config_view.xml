@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Action serveur : ouvre directement le POS si une seule caisse existe -->
+    <record id="action_open_pos_direct" model="ir.actions.server">
+        <field name="name">Point de Vente</field>
+        <field name="model_id" ref="point_of_sale.model_pos_config"/>
+        <field name="state">code</field>
+        <field name="code">action = model.action_open_pos_direct()</field>
+    </record>
+
+    <!-- Rediriger le menu principal POS vers l'action directe -->
+    <record id="point_of_sale.menu_pos_dashboard" model="ir.ui.menu">
+        <field name="action" ref="action_open_pos_direct"/>
+    </record>
+
+    <!-- Masquer le bloc "Restaurant Mode" dans les paramètres POS -->
+    <record id="view_pos_config_settings_hide_restaurant" model="ir.ui.view">
+        <field name="name">pos.config.settings.hide.restaurant</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="point_of_sale.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <block id="restaurant_section" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </block>
+        </field>
+    </record>
+
+</odoo>

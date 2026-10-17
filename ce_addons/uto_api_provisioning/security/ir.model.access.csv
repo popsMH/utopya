@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_res_company_uto,access_res_company_uto,model_res_company,uto_api_provisioning.group_company_main_user,1,1,0,0
+access_hr_employee_uto,access_hr_employee_uto,model_hr_employee,uto_api_provisioning.group_company_main_user,1,1,1,1
+access_resource_resource_uto,access_resource_resource_uto,model_resource_resource,uto_api_provisioning.group_company_main_user,1,1,1,1

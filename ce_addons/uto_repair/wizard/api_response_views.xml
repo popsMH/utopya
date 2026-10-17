@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="api_response_view_form" model="ir.ui.view">
+        <field name="name">api.response.form</field>
+        <field name="model">api.response</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="result_message" readonly="1" />
+                <footer>
+                    <button string="OK" class="btn-primary" special="cancel" data-hotkey="x"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

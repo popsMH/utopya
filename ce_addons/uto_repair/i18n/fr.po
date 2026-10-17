@@ -1,0 +1,1525 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* uto_repair, sale, stock, account
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0+e-20250203\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-08 00:52+0000\n"
+"PO-Revision-Date: 2026-01-25 14:53+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_repair_order_form_inherit
+msgid "<span class=\"o_stat_text\">Quote / Invoice</span>"
+msgstr "<span class=\"o_stat_text\">Devis / Facture</span>"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_invoice_include_bonus
+msgid "11.05"
+msgstr ""
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_invoice_include_bonus
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_saleorder_inherit
+msgid "1234DFG345"
+msgstr ""
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_invoice_include_bonus
+msgid "20.00"
+msgstr ""
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_invoice_include_bonus
+msgid "2021-09-19"
+msgstr ""
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_invoice_include_bonus
+msgid "<span>(</span>"
+msgstr ""
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_invoice_include_bonus
+msgid "<span>)</span>"
+msgstr ""
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_invoice_include_bonus
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_saleorder_inherit
+msgid "<strong>Brand</strong>"
+msgstr "<strong>Marque</strong>"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_invoice_include_bonus
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_saleorder_inherit
+msgid "<strong>Device ID</strong>"
+msgstr "<strong>ID de l'appareil</strong>"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_invoice_include_bonus
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_saleorder_inherit
+msgid "<strong>Device</strong>"
+msgstr "<strong>Appareil</strong>"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_invoice_include_bonus
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_saleorder_inherit
+msgid "<strong>Repair Order</strong>"
+msgstr "<strong>Ordre de réparation</strong>"
+
+#. module: uto_repair
+#. odoo-python
+#: code:uto_repair/models/repair.py:0
+#: model:ir.model,name:uto_repair.model_api_response
+msgid "API Response"
+msgstr "Résponse de l'API"
+
+#. module: uto_repair
+#: model:ir.actions.act_window,name:uto_repair.action_repair_accessories
+#: model:ir.ui.menu,name:uto_repair.repair_menu_accessories
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_repair_accessories_list
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_repair_accessories_search
+msgid "Accessories"
+msgstr "Accéssoires"
+
+#. module: uto_repair
+#: model:ir.model,name:uto_repair.model_accessories_provided
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__accessories_ids
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_repair_accessories_form
+msgid "Accessories Provided"
+msgstr "Accéssoires fournis"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__location_dest_id
+msgid "Added Parts Destination Location"
+msgstr "Emplacement de destination des pièces ajoutées"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_invoice_include_bonus
+msgid "Amount Due"
+msgstr "Montant dû"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__are_files_uploaded
+msgid "Are files uploaded ?"
+msgstr "Les fichiers sont téléversés  ?"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__assigned_technician
+msgid "Assigned Technician"
+msgstr "Technicien désigné"
+
+#. module: uto_repair
+#: model:repair.state,name:uto_repair.state_2
+#: model:repair.state.helper,name:uto_repair.state_helper_2
+msgid "Awaiting Quotation Validation"
+msgstr "En attente de validation du devis"
+
+#. module: uto_repair
+#: model:ir.actions.act_window,name:uto_repair.action_brand_brand
+#: model:ir.actions.act_window,name:uto_repair.action_repair_brand
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__brand_brand_id
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__repair_brand_id
+#: model:ir.ui.menu,name:uto_repair.repair_menu_brand_brand
+#: model:ir.ui.menu,name:uto_repair.repair_menu_repair_brand
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_brand_brand_form
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_brand_brand_list
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_brand_brand_search
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_repair_brand_form
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_repair_brand_list
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_repair_brand_search
+#: model:ir.model.fields,field_description:uto_repair.field_commercial_reference__brand_brand_id
+msgid "Brand"
+msgstr "Marque"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_brand__brand_id
+msgid "Brand ID"
+msgstr "ID de la marque"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_brand_brand__name
+#: model:ir.model.fields,field_description:uto_repair.field_repair_brand__name
+msgid "Brand Name"
+msgstr "Nom de la marque"
+
+#. module: uto_repair
+#: model:ir.model,name:uto_repair.model_brand_brand
+#: model:ir.model,name:uto_repair.model_repair_brand
+msgid "Brand of device"
+msgstr "Marque de l'appareil"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_repair_order_form_inherit
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: uto_repair
+#: model:ir.model.fields.selection,name:uto_repair.selection__account_move__state__cancel
+#: model:ir.model.fields.selection,name:uto_repair.selection__sale_order__state__cancel
+#: model:repair.state,name:uto_repair.state_7
+#: model:repair.state.helper,name:uto_repair.state_helper_7
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_repair_order_form_filter_inherit
+msgid "Cancelled"
+msgstr "Annulé"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_invoice_include_bonus
+msgid "Cancelled Credit Note"
+msgstr "Avoir Annulé"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_invoice_include_bonus
+msgid "Cancelled Invoice"
+msgstr "Facture Annulée"
+
+#. module: uto_repair
+#: model:ir.actions.act_window,name:uto_repair.action_catalog_catalog
+#: model:ir.actions.act_window,name:uto_repair.action_ecosystem_ecologic_catalog
+#: model:ir.model,name:uto_repair.model_catalog_catalog
+#: model:ir.model.fields,field_description:uto_repair.field_repair_brand__catalog_id
+#: model:ir.model.fields,field_description:uto_repair.field_repair_code__catalog_id
+#: model:ir.ui.menu,name:uto_repair.repair_menu_catalog_catalog
+#: model:ir.ui.menu,name:uto_repair.repair_menu_ecosystem_ecologic_catalog
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_catalog_catalog_form
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_catalog_catalog_list
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_catalog_catalog_search
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_ecosystem_ecologic_catalog_form
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_ecosystem_ecologic_catalog_list
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_ecosystem_ecologic_catalog_search
+msgid "Catalog"
+msgstr "Catalogue"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_repair_order_form_inherit
+msgid "Check Claim Status"
+msgstr "Vérifier l'état de la demande"
+
+#. module: uto_repair
+#. odoo-python
+#: code:uto_repair/models/repair.py:0
+msgid "City"
+msgstr "Ville"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__claim_id
+msgid "Claim ID"
+msgstr "ID de réclamation"
+
+#. module: uto_repair
+#. odoo-python
+#: code:uto_repair/models/repair.py:0
+msgid ""
+"Claim not created \n"
+" - Code: %s \n"
+" - Status: %s \n"
+" - Message: %s"
+msgstr ""
+"Demande non créée \n"
+" - Code: %s \n"
+" - Statut: %s \n"
+" - Message: %s"
+
+#. module: uto_repair
+#: model:ir.actions.act_window,name:uto_repair.action_code_code
+#: model:ir.model.fields,field_description:uto_repair.field_repair_brand__code
+#: model:ir.model.fields,field_description:uto_repair.field_repair_code__code
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__code_code_id
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__repair_code_id
+#: model:ir.ui.menu,name:uto_repair.repair_menu_code_code
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_code_code_form
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_code_code_list
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_code_code_search
+msgid "Code"
+msgstr ""
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__code_domain_ids
+msgid "Code Domain Ids"
+msgstr ""
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__commercial_reference
+msgid "Commercial Reference"
+msgstr "Référence commerciale"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__location_id
+msgid "Component Source Location"
+msgstr "Emplacement d'origine des composants"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_repair_order_form_inherit
+msgid "Confirm Claim"
+msgstr "Confirmer la demande"
+
+#. module: uto_repair
+#: model:ir.model,name:uto_repair.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__contact_phone
+msgid "Contact Phone"
+msgstr "Téléphone de contact"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_repair_order_form_inherit
+msgid "Create New Claim"
+msgstr "Créer une nouvelle demande"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_repair_order_form_inherit
+msgid "Create Quotation"
+msgstr "Créer un devis"
+
+#. module: uto_repair
+#: model_terms:ir.actions.act_window,help:uto_repair.action_repair_accessories
+msgid "Create a new Accessory"
+msgstr "Créer un nouvel accessoire"
+
+#. module: uto_repair
+#: model_terms:ir.actions.act_window,help:uto_repair.action_brand_brand
+#: model_terms:ir.actions.act_window,help:uto_repair.action_repair_brand
+msgid "Create a new Brand"
+msgstr "Créer une nouvelle marque"
+
+#. module: uto_repair
+#: model_terms:ir.actions.act_window,help:uto_repair.action_catalog_catalog
+#: model_terms:ir.actions.act_window,help:uto_repair.action_ecosystem_ecologic_catalog
+msgid "Create a new Catalog"
+msgstr "Créer une nouvelle catalogue"
+
+#. module: uto_repair
+#: model_terms:ir.actions.act_window,help:uto_repair.action_code_code
+msgid "Create a new Code"
+msgstr "Créer un nouveau code"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_accessories_provided__create_uid
+#: model:ir.model.fields,field_description:uto_repair.field_api_response__create_uid
+#: model:ir.model.fields,field_description:uto_repair.field_brand_brand__create_uid
+#: model:ir.model.fields,field_description:uto_repair.field_catalog_catalog__create_uid
+#: model:ir.model.fields,field_description:uto_repair.field_code_code__create_uid
+#: model:ir.model.fields,field_description:uto_repair.field_ecosystem_ecologic_catalog__create_uid
+#: model:ir.model.fields,field_description:uto_repair.field_repair_brand__create_uid
+#: model:ir.model.fields,field_description:uto_repair.field_repair_code__create_uid
+#: model:ir.model.fields,field_description:uto_repair.field_repair_state__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_accessories_provided__create_date
+#: model:ir.model.fields,field_description:uto_repair.field_api_response__create_date
+#: model:ir.model.fields,field_description:uto_repair.field_brand_brand__create_date
+#: model:ir.model.fields,field_description:uto_repair.field_catalog_catalog__create_date
+#: model:ir.model.fields,field_description:uto_repair.field_code_code__create_date
+#: model:ir.model.fields,field_description:uto_repair.field_ecosystem_ecologic_catalog__create_date
+#: model:ir.model.fields,field_description:uto_repair.field_repair_brand__create_date
+#: model:ir.model.fields,field_description:uto_repair.field_repair_code__create_date
+#: model:ir.model.fields,field_description:uto_repair.field_repair_state__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_invoice_include_bonus
+msgid "Credit Note"
+msgstr "Avoir"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__currency_id
+#: model:ir.model.fields,field_description:uto_repair.field_stock_move__currency_id
+msgid "Currency"
+msgstr "Devise"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__currency_rate
+msgid "Currency Rate"
+msgstr "Taux de change"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__customer_info_alert_message
+msgid "Customer Info Alert Message"
+msgstr "Message d'alerte d'informations client"
+
+#. module: uto_repair
+#. odoo-python
+#: code:uto_repair/models/repair.py:0
+msgid "Customer is missing !"
+msgstr "Pas de client !"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_code_code__name
+#: model:ir.model.fields,field_description:uto_repair.field_repair_code__name
+msgid "Description"
+msgstr ""
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__device_id
+msgid "Device ID"
+msgstr "ID de l'appareil"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_stock_move__discount
+msgid "Discount (%)"
+msgstr "Remise (%)"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_accessories_provided__display_name
+#: model:ir.model.fields,field_description:uto_repair.field_api_response__display_name
+#: model:ir.model.fields,field_description:uto_repair.field_brand_brand__display_name
+#: model:ir.model.fields,field_description:uto_repair.field_catalog_catalog__display_name
+#: model:ir.model.fields,field_description:uto_repair.field_code_code__display_name
+#: model:ir.model.fields,field_description:uto_repair.field_ecosystem_ecologic_catalog__display_name
+#: model:ir.model.fields,field_description:uto_repair.field_repair_brand__display_name
+#: model:ir.model.fields,field_description:uto_repair.field_repair_code__display_name
+#: model:ir.model.fields,field_description:uto_repair.field_repair_state__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__catalog_domain_ids
+#: model:ir.model.fields,field_description:uto_repair.field_stock_move__domain_ids
+msgid "Domain Ids"
+msgstr ""
+
+#. module: uto_repair
+#: model:ir.model.fields.selection,name:uto_repair.selection__repair_order__reimbursement_claim_state__done
+#: model:repair.state,name:uto_repair.state_6
+#: model:repair.state.helper,name:uto_repair.state_helper_6
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_repair_order_form_filter_inherit
+msgid "Done"
+msgstr "Fait"
+
+#. module: uto_repair
+#: model:ir.model.fields.selection,name:uto_repair.selection__account_move__state__draft
+#: model:ir.model.fields.selection,name:uto_repair.selection__sale_order__state__draft
+#: model:repair.state,name:uto_repair.state_1
+#: model:repair.state.helper,name:uto_repair.state_helper_1
+msgid "Draft"
+msgstr "Brouillon"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_invoice_include_bonus
+msgid "Draft Credit Note"
+msgstr "Avoir brouillon"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_invoice_include_bonus
+msgid "Draft Invoice"
+msgstr "Facture brouillon"
+
+#. module: uto_repair
+#: model:ir.model.fields.selection,name:uto_repair.selection__brand_brand__brand_type__ecologic
+#: model:ir.model.fields.selection,name:uto_repair.selection__code_code__code_type__ecologic
+#: model:ir.model.fields.selection,name:uto_repair.selection__ecosystem_ecologic_catalog__catalog_type__ecologic
+#: model:ir.model.fields.selection,name:uto_repair.selection__repair_brand__brand_type__ecologic
+#: model:ir.model.fields.selection,name:uto_repair.selection__repair_code__code_type__ecologic
+#: model:ir.model.fields.selection,name:uto_repair.selection__repair_order__product_to_repair_type__ecologic
+msgid "Ecologic"
+msgstr ""
+
+#. module: uto_repair
+#: model:ir.model.fields.selection,name:uto_repair.selection__brand_brand__brand_type__ecosystem
+#: model:ir.model.fields.selection,name:uto_repair.selection__code_code__code_type__ecosystem
+#: model:ir.model.fields.selection,name:uto_repair.selection__ecosystem_ecologic_catalog__catalog_type__ecosystem
+#: model:ir.model.fields.selection,name:uto_repair.selection__repair_brand__brand_type__ecosystem
+#: model:ir.model.fields.selection,name:uto_repair.selection__repair_code__code_type__ecosystem
+#: model:ir.model.fields.selection,name:uto_repair.selection__repair_order__product_to_repair_type__ecosystem
+msgid "Ecosystem"
+msgstr ""
+
+#. module: uto_repair
+#: model:ir.model,name:uto_repair.model_ecosystem_ecologic_catalog
+msgid "Ecosystem Ecologic Catalog"
+msgstr ""
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__ecosystem_request_status
+msgid "Ecosystem Request Status"
+msgstr "Statut de la demande Ecosystem"
+
+#. module: uto_repair
+#. odoo-python
+#: code:uto_repair/models/repair.py:0
+msgid "Email"
+msgstr ""
+
+#. module: uto_repair
+#. odoo-python
+#: code:uto_repair/models/repair.py:0
+msgid ""
+"Error encoutered \n"
+" - Code: %s \n"
+" - Status: %s \n"
+" - Message: %s"
+msgstr ""
+"Erreur rencontrée \n"
+" - Code: %s \n"
+" - Statut: %s \n"
+" - Message: %s"
+
+#. module: uto_repair
+#. odoo-python
+#: code:uto_repair/models/repair.py:0
+msgid "Error encoutered : %s"
+msgstr "Erreur rencontrée : %s"
+
+#. module: uto_repair
+#. odoo-python
+#: code:uto_repair/models/ecosystem_ecologic_catalog.py:0
+msgid ""
+"Error has occured :\n"
+" %s"
+msgstr ""
+"Une erreur s'est produite :\n"
+" %s"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__failure_description
+msgid "Failure Description"
+msgstr "Description de l'échec"
+
+#. module: uto_repair
+#: model:ir.actions.server,name:uto_repair.ir_cron_fetch_ecologic_catalog_data_ir_actions_server
+msgid "Fetch Ecologic Catalog Data"
+msgstr "Récupérer les données du catalogue Ecologic"
+
+#. module: uto_repair
+#: model:ir.actions.server,name:uto_repair.ir_cron_fetch_ecosystem_catalog_data_ir_actions_server
+msgid "Fetch Ecosystem Catalog Data"
+msgstr "Récupérer les données du catalogue Ecosystem"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__piece_of_evidence_filename
+msgid "File Name"
+msgstr ""
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_repair_order_form_inherit
+msgid "Files"
+msgstr "Fichiers"
+
+#. module: uto_repair
+#: model:ir.model.fields.selection,name:uto_repair.selection__repair_order__reimbursement_claim_state__file_uploaded
+msgid "Files Uploaded"
+msgstr "Fichiers téléversés"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__fiscal_position_id
+msgid "Fiscal Position"
+msgstr "Position fiscale"
+
+#. module: uto_repair
+#: model:ir.model.fields,help:uto_repair.field_repair_order__fiscal_position_id
+msgid ""
+"Fiscal positions are used to adapt taxes and accounts for particular "
+"customers or sales orders/invoices.The default value comes from the "
+"customer."
+msgstr ""
+"Les positions fiscales servent à adapter les taxes et les comptes "
+"à des clients ou des commandes/factures spécifiques.La valeur par défaut provient "
+"du client."
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_repair_order_form_inherit
+msgid "General"
+msgstr "Générale"
+
+#. module: uto_repair
+#. odoo-python
+#: code:uto_repair/models/ecosystem_ecologic_catalog.py:0
+msgid "Get Porducts API error: %s"
+msgstr "Erreur de l'API Get Products: %s"
+
+#. module: uto_repair
+#. odoo-python
+#: code:uto_repair/models/repair.py:0
+msgid "Get Repair Site ID API error: %s"
+msgstr "Erreur de l'API Get Repair Site ID : %s"
+
+#. module: uto_repair
+#. odoo-python
+#: code:uto_repair/models/ecosystem_ecologic_catalog.py:0
+msgid "Get brands API error: %s"
+msgstr "Erreur de l'API Get brands : %s"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__show_update_fpos
+msgid "Has Fiscal Position Changed"
+msgstr "La Position fiscale a changé ?"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_accessories_provided__id
+#: model:ir.model.fields,field_description:uto_repair.field_api_response__id
+#: model:ir.model.fields,field_description:uto_repair.field_brand_brand__id
+#: model:ir.model.fields,field_description:uto_repair.field_catalog_catalog__id
+#: model:ir.model.fields,field_description:uto_repair.field_code_code__id
+#: model:ir.model.fields,field_description:uto_repair.field_ecosystem_ecologic_catalog__id
+#: model:ir.model.fields,field_description:uto_repair.field_repair_brand__id
+#: model:ir.model.fields,field_description:uto_repair.field_repair_code__id
+#: model:ir.model.fields,field_description:uto_repair.field_repair_state__id
+msgid "ID"
+msgstr ""
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_invoice_include_bonus
+msgid "INV/2023/0001"
+msgstr ""
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__iris_section
+msgid "IRIS Section"
+msgstr "Section IRIS"
+
+#. module: uto_repair
+#. odoo-python
+#: code:uto_repair/models/repair.py:0
+msgid "Invalid upload response"
+msgstr "Réponse de téléversement invalide"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_invoice_include_bonus
+msgid "Invoice"
+msgstr "Facture"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_repair_order_form_inherit
+msgid "Invoicing"
+msgstr "Facturation"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_invoice_include_bonus
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_saleorder_inherit
+msgid "Iphone 12"
+msgstr ""
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_state__is_cancelled
+msgid "Is Cancelled State ?"
+msgstr ""
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__claim_request_file_uploaded
+msgid "Is Claim Request File uploaded ?"
+msgstr "Le fichier de demande de réclamation a été téléversé ?"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__device_picture_file_uploaded
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__device_picture_uploaded
+msgid "Is Device Picture File uploaded ?"
+msgstr "Le fichier image de l'appareil a été téléversé ?"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_state__is_done
+msgid "Is Done State ?"
+msgstr ""
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_brand__is_ecologic_brand
+msgid "Is Ecologic Brand ?"
+msgstr "Est une marque Ecologic"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_brand__is_ecosystem_brand
+msgid "Is Ecosystem Brand ?"
+msgstr "Est une marque Ecosystem"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__invoice_uploaded
+msgid "Is Invoice File uploaded ?"
+msgstr "Le fichier de facture a été téléversé ?"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__invoice_file_uploaded
+msgid "Is Invoice uploaded ?"
+msgstr "La facture a été téléversée ?"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__name_plate_uploaded
+msgid "Is Nameplate File uploaded ?"
+msgstr "Le fichier de la plaque signalétique a été téléversé ?"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__is_phone
+msgid "Is Phone ?"
+msgstr "Est portable ?"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_ecosystem_ecologic_catalog__is_piece_uthorized
+msgid "Is Piece Authorized ?"
+msgstr "La pièce est autorisée ?"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__is_ro_cancelled
+msgid "Is Ro Cancelled"
+msgstr ""
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__is_ro_done
+msgid "Is Ro Done"
+msgstr ""
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__is_ro_repaired
+msgid "Is Ro Repaired"
+msgstr ""
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_ecosystem_ecologic_catalog__is_serial_tag_required
+msgid "Is Serial Tag Required ?"
+msgstr "Une étiquette numéro de série requise ?"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__serial_tag_file_uploaded
+msgid "Is Serial Tag uploaded ?"
+msgstr "L'étiquette de série a été téléversée ?"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__is_submitted
+msgid "Is Submitted"
+msgstr "Est soumise"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_state__is_unclickable
+msgid "Is Unclickable State ?"
+msgstr ""
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_brand_brand__is_available_for_repair
+#: model:ir.model.fields,field_description:uto_repair.field_catalog_catalog__is_available_for_repair
+msgid "Is available for repair ?"
+msgstr "Est-il disponible pour réparation ?"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__is_claim_confirmed
+msgid "Is claim confirmed ?"
+msgstr "La réclamation a été confirmée ?"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__is_claim_confirmed_and_verified
+msgid "Is claim confirmed and verified ?"
+msgstr "La réclamation a été confirmée et vérifiée ?"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__is_claim_created
+msgid "Is claim created ?"
+msgstr "La réclamation a été créée ?"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_account_bank_statement_line__is_linked_to_ecosystem_eligible_repair
+#: model:ir.model.fields,field_description:uto_repair.field_account_move__is_linked_to_ecosystem_eligible_repair
+msgid "Is linked to a repair eligible for Ecosystem or Ecologic ?"
+msgstr "Est lié à une réparation éligible à Ecosystem ou Ecologic ?"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_account_bank_statement_line__is_linked_to_repair_order_phone
+#: model:ir.model.fields,field_description:uto_repair.field_account_move__is_linked_to_repair_order_phone
+#: model:ir.model.fields,field_description:uto_repair.field_sale_order__is_linked_to_repair_order_phone
+msgid "Is linked to repair order phone ?"
+msgstr "Est lié à une ordre de réparation pour portable ?"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__piece_of_evidence_uploaded
+msgid "Is piece of evidence File uploaded ?"
+msgstr "Le fichier de preuve a été téléversé ?"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_account_journal__is_repair_bonus
+msgid "Is repair bonus ?"
+msgstr "Un bonus de réparation ?"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__is_valid
+msgid "Is valid"
+msgstr "Est validée"
+
+#. module: uto_repair
+#: model:ir.model,name:uto_repair.model_account_journal
+msgid "Journal"
+msgstr ""
+
+#. module: uto_repair
+#: model:ir.model,name:uto_repair.model_account_move
+msgid "Journal Entry"
+msgstr "Pièce comptable"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_accessories_provided__write_uid
+#: model:ir.model.fields,field_description:uto_repair.field_api_response__write_uid
+#: model:ir.model.fields,field_description:uto_repair.field_brand_brand__write_uid
+#: model:ir.model.fields,field_description:uto_repair.field_catalog_catalog__write_uid
+#: model:ir.model.fields,field_description:uto_repair.field_code_code__write_uid
+#: model:ir.model.fields,field_description:uto_repair.field_ecosystem_ecologic_catalog__write_uid
+#: model:ir.model.fields,field_description:uto_repair.field_repair_brand__write_uid
+#: model:ir.model.fields,field_description:uto_repair.field_repair_code__write_uid
+#: model:ir.model.fields,field_description:uto_repair.field_repair_state__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_accessories_provided__write_date
+#: model:ir.model.fields,field_description:uto_repair.field_api_response__write_date
+#: model:ir.model.fields,field_description:uto_repair.field_brand_brand__write_date
+#: model:ir.model.fields,field_description:uto_repair.field_catalog_catalog__write_date
+#: model:ir.model.fields,field_description:uto_repair.field_code_code__write_date
+#: model:ir.model.fields,field_description:uto_repair.field_ecosystem_ecologic_catalog__write_date
+#: model:ir.model.fields,field_description:uto_repair.field_repair_brand__write_date
+#: model:ir.model.fields,field_description:uto_repair.field_repair_code__write_date
+#: model:ir.model.fields,field_description:uto_repair.field_repair_state__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_repair_order_form_filter_inherit
+msgid "Late"
+msgstr "En retard"
+
+#. module: uto_repair
+#. odoo-python
+#: code:uto_repair/models/account.py:0
+msgid "Less Payment"
+msgstr "Moins de paiement"
+
+#. module: uto_repair
+#. odoo-python
+#: code:uto_repair/models/ecosystem_ecologic_catalog.py:0
+#: code:uto_repair/models/repair.py:0
+msgid "Login API error: %s"
+msgstr "Erreur de connexion à l'API : %s"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_repair_order_form_inherit
+msgid "Mark As Done"
+msgstr "Marquer comme terminé"
+
+#. module: uto_repair
+#. odoo-python
+#: code:uto_repair/models/repair.py:0
+msgid "Missing customer info : %s"
+msgstr "Informations client manquantes : %s"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_invoice_include_bonus
+msgid "Net Amount"
+msgstr "Montant Net"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_repair_order_form_filter_inherit
+msgid "New"
+msgstr "Nouveau"
+
+#. module: uto_repair
+#: model:ir.model.fields.selection,name:uto_repair.selection__repair_order__reimbursement_claim_state__draft
+msgid "New Request"
+msgstr "Nouvelle demande"
+
+#. module: uto_repair
+#. odoo-python
+#: code:uto_repair/models/repair.py:0
+msgid "No Site gotten: %s"
+msgstr "Site introuvable : %s"
+
+#. module: uto_repair
+#. odoo-python
+#: code:uto_repair/models/ecosystem_ecologic_catalog.py:0
+msgid "No brands gotten: %s"
+msgstr "Aucune marque obtenue : %s"
+
+#. module: uto_repair
+#. odoo-python
+#: code:uto_repair/models/repair.py:0
+msgid "No invoice related to this repair order !"
+msgstr "Aucune facture n'est liée à cet ordre de réparation !"
+
+#. module: uto_repair
+#. odoo-python
+#: code:uto_repair/models/ecosystem_ecologic_catalog.py:0
+msgid "No products gotten: %s"
+msgstr "Aucun produit obtenu : %s"
+
+#. module: uto_repair
+#. odoo-python
+#: code:uto_repair/models/repair.py:0
+msgid ""
+"No token gotten \n"
+" - Code: %s \n"
+" - Status: %s \n"
+" - Message: %s"
+msgstr ""
+"Aucun jeton obtenu \n"
+" - Code: %s \n"
+" - Statut: %s \n"
+" - Message: %s"
+
+#. module: uto_repair
+#. odoo-python
+#: code:uto_repair/models/ecosystem_ecologic_catalog.py:0
+#: code:uto_repair/models/repair.py:0
+msgid "No token gotten: %s"
+msgstr "Aucun jeton obtenu: %s"
+
+#. module: uto_repair
+#. odoo-python
+#: code:uto_repair/models/repair.py:0
+msgid "Not submitted, reason : %s"
+msgstr "Non soumis, motif : %s"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.api_response_view_form
+msgid "OK"
+msgstr ""
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__picking_type_id
+msgid "Operation Type"
+msgstr "Type d'opération"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_brand__organization
+msgid "Organization"
+msgstr "Organisation"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_repair_order_form_inherit
+msgid "Other Info"
+msgstr "Autres infos"
+
+#. module: uto_repair
+#. odoo-python
+#: code:uto_repair/models/repair.py:0
+msgid "PUT error: %s"
+msgstr ""
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_invoice_include_bonus
+msgid "Paid on"
+msgstr "Payé le"
+
+#. module: uto_repair
+#: model:ir.model.fields.selection,name:uto_repair.selection__stock_move__repair_product_line_type__part
+msgid "Part"
+msgstr "Pièces"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_repair_order_form_inherit
+msgid "Parts and Labor"
+msgstr "Pièces & Main d'œuvre"
+
+#. module: uto_repair
+#. odoo-python
+#: code:uto_repair/models/repair.py:0
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_invoice_include_bonus
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_saleorder_inherit
+msgid "Phone"
+msgstr "Téléphone"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__nameplate_photo
+msgid "Photo of the nameplate"
+msgstr "Photo de la plaque signalétique"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__piece_of_evidence_file
+msgid "Piece of evidence"
+msgstr "Élément de preuve"
+
+#. module: uto_repair
+#. odoo-python
+#: code:uto_repair/models/repair.py:0
+msgid "Postal Code"
+msgstr "Code Postal"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_sale_order_form_inherit
+msgid "Print"
+msgstr "Imprimer"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_stock_move__product_id
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_repair_order_form_filter_inherit
+msgid "Product"
+msgstr "Produit"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__product_location_dest_id
+msgid "Product Destination Location"
+msgstr "Emplacement de destination du produit"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_ecosystem_ecologic_catalog__product_id
+msgid "Product ID"
+msgstr "ID Produit"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_catalog_catalog__name
+#: model:ir.model.fields,field_description:uto_repair.field_ecosystem_ecologic_catalog__name
+msgid "Product Name"
+msgstr "Nom Produit"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__product_location_src_id
+msgid "Product Source Location"
+msgstr "Emplacement d'origine du produit"
+
+#. module: uto_repair
+#. odoo-python
+#: code:uto_repair/models/repair.py:0
+msgid "Product taxes have been recomputed according to fiscal position %s."
+msgstr "Les taxes sur les produits ont été recalculées en fonction de la situation fiscale %s."
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__catalog_catalog_id
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__catalog_id
+msgid "Product to Repair"
+msgstr "Produit à réparer"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__if_eligible
+msgid "QualiRépar eligible"
+msgstr "Eligible QualiRépar"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_repair_order_form_inherit
+msgid "Quantity"
+msgstr "Quantité"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_account_bank_statement_line__ro_name
+#: model:ir.model.fields,field_description:uto_repair.field_account_move__ro_name
+#: model:ir.model.fields,field_description:uto_repair.field_sale_order__ro_name
+msgid "RO name"
+msgstr ""
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_account_bank_statement_line__ro_product_to_repair_brand
+#: model:ir.model.fields,field_description:uto_repair.field_account_move__ro_product_to_repair_brand
+#: model:ir.model.fields,field_description:uto_repair.field_sale_order__ro_product_to_repair_brand
+msgid "RO product to repair brand"
+msgstr ""
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_account_bank_statement_line__ro_product_to_repair_device
+#: model:ir.model.fields,field_description:uto_repair.field_account_move__ro_product_to_repair_device
+#: model:ir.model.fields,field_description:uto_repair.field_sale_order__ro_product_to_repair_device
+msgid "RO product to repair device"
+msgstr ""
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_account_bank_statement_line__ro_product_to_repair_device_id
+#: model:ir.model.fields,field_description:uto_repair.field_account_move__ro_product_to_repair_device_id
+#: model:ir.model.fields,field_description:uto_repair.field_sale_order__ro_product_to_repair_device_id
+msgid "RO product to repair device id"
+msgstr ""
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_repair_order_form_inherit
+msgid "Recompute all taxes based on this fiscal position"
+msgstr "Recalculer toutes les taxes en fonction de cette position fiscale"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__recycle_location_id
+msgid "Recycled Parts Destination Location"
+msgstr "Emplacement de destination des pièces recyclées"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__reimbursement_claim_id
+msgid "Reimbursement Claim ID"
+msgstr "ID demande de remboursement"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_repair_order_form_inherit
+msgid "Reimbursement Claim Section"
+msgstr "Section des demandes de remboursement"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__reimbursement_claim_state
+msgid "Reimbursement Status"
+msgstr "État du remboursement"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__parts_location_id
+msgid "Removed Parts Destination Location"
+msgstr "Emplacement de destination des pièces supprimées"
+
+#. module: uto_repair
+#: model:ir.model,name:uto_repair.model_repair_order
+msgid "Repair Order"
+msgstr "Ordre de réparation"
+
+#. module: uto_repair
+#: model:ir.model,name:uto_repair.model_repair_state
+msgid "Repair States"
+msgstr "Statut de réparation"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_invoice_include_bonus
+msgid "Repair bonus"
+msgstr "Bonus réparation"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__repair_end_date
+msgid "Repair end date"
+msgstr "Date de fin de réparation"
+
+#. module: uto_repair
+#: model:ir.model,name:uto_repair.model_code_code
+#: model:ir.model,name:uto_repair.model_repair_code
+msgid "Repaire Code"
+msgstr "Code de réparation"
+
+#. module: uto_repair
+#: model:repair.state,name:uto_repair.state_5
+#: model:repair.state.helper,name:uto_repair.state_helper_5
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_repair_order_form_filter_inherit
+msgid "Repaired"
+msgstr "Réparé"
+
+#. module: uto_repair
+#: model:ir.model.fields.selection,name:uto_repair.selection__repair_order__reimbursement_claim_state__confirmed
+msgid "Request Confirmed"
+msgstr "Demande confirmée"
+
+#. module: uto_repair
+#: model:ir.model.fields.selection,name:uto_repair.selection__repair_order__reimbursement_claim_state__sent
+msgid "Request Sent"
+msgstr "Demande envoyée"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_repair_order_form_inherit
+msgid "Reset to Draft"
+msgstr "Remettre en brouillon"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_api_response__result_message
+msgid "Result Message"
+msgstr "Message de résultat"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_invoice_include_bonus
+msgid "Reversed on"
+msgstr "Inversé le"
+
+#. module: uto_repair
+#: model:ir.model,name:uto_repair.model_sale_order
+msgid "Sales Order"
+msgstr "Commande client"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__sap_service_order
+msgid "Sap Service Order"
+msgstr "Commande de service SAP"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_state__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: uto_repair
+#: model:ir.model.fields.selection,name:uto_repair.selection__stock_move__repair_product_line_type__service
+msgid "Service"
+msgstr ""
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_sale_order_form_inherit
+msgid "Set To Draft"
+msgstr "Remettre en Brouillon"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__show_create_so_button
+msgid "Show Create So Button"
+msgstr ""
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__show_customer_info_alert
+msgid "Show Customer Info Alert"
+msgstr ""
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__show_mark_as_done_button
+msgid "Show Mark As Done Button"
+msgstr ""
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__show_validate_button
+msgid "Show Validate Button"
+msgstr ""
+
+#. module: uto_repair
+#: model:ir.actions.server,name:uto_repair.action_make_available_for_repair
+#: model:ir.actions.server,name:uto_repair.action_make_brand_available_for_repair
+msgid "Show or Hide in repair order"
+msgstr "Afficher ou masquer dans l'ordre de réparation"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_invoice_include_bonus
+msgid "Solde"
+msgstr ""
+
+#. module: uto_repair
+#. odoo-python
+#: code:uto_repair/models/repair.py:0
+msgid "Some customer info missing !"
+msgstr "Certaines informations client sont manquantes !"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__state_id
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__state_ids
+msgid "State"
+msgstr "Statut"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_state__name
+msgid "State Name"
+msgstr ""
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_account_bank_statement_line__state
+#: model:ir.model.fields,field_description:uto_repair.field_account_move__state
+#: model:ir.model.fields,field_description:uto_repair.field_sale_order__state
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_repair_order_form_filter_inherit
+msgid "Status"
+msgstr "Statut"
+
+#. module: uto_repair
+#: model:ir.model,name:uto_repair.model_stock_move
+msgid "Stock Move"
+msgstr "Mouvement de stock"
+
+#. module: uto_repair
+#. odoo-python
+#: code:uto_repair/models/repair.py:0
+msgid "Street"
+msgstr "Rue"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_repair_order_form_inherit
+msgid "Submit Claim"
+msgstr "Soumettre une demande"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_stock_move__price_subtotal
+msgid "Subtotal"
+msgstr "Sous total"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_stock_move__tax_id
+msgid "Taxes"
+msgstr ""
+
+#. module: uto_repair
+#: model:ir.model.fields,help:uto_repair.field_repair_order__iris_section
+msgid ""
+"The IRIS breakdown code must be included among those associated with the "
+"product in the repository."
+msgstr ""
+
+#. module: uto_repair
+#. odoo-python
+#: code:uto_repair/models/repair.py:0
+msgid "The Nameplate Photo of this Catalog must be specified !"
+msgstr "La photo de la plaque signalétique de ce catalogue doit être spécifiée !"
+
+#. module: uto_repair
+#. odoo-python
+#: code:uto_repair/models/repair.py:0
+msgid "The sale order must be created !"
+msgstr "La commande client doit être créée !"
+
+#. module: uto_repair
+#. odoo-python
+#: code:uto_repair/models/account.py:0
+msgid "There has to be only one Bonus Journal per Company !"
+msgstr "Il ne peut y avoir qu'un seul journal de bonus par entreprise !"
+
+#. module: uto_repair
+#: model:ir.model.fields,help:uto_repair.field_repair_order__location_id
+msgid ""
+"This is the location where the components of product to repair is located."
+msgstr ""
+"Il s'agit de l'emplacement où se trouvent les composants du produit à "
+"réparer."
+
+#. module: uto_repair
+#: model:ir.model.fields,help:uto_repair.field_repair_order__product_location_src_id
+msgid "This is the location where the product to repair is located."
+msgstr "Il s'agit de l'emplacement où le produit à réparer se situe."
+
+#. module: uto_repair
+#: model:ir.model.fields,help:uto_repair.field_repair_order__parts_location_id
+#: model:ir.model.fields,help:uto_repair.field_repair_order__recycle_location_id
+msgid "This is the location where the repair parts are located."
+msgstr "Il s'agit de l'emplacement où se situent les pièces de réparation."
+
+#. module: uto_repair
+#: model:ir.model.fields,help:uto_repair.field_repair_order__location_dest_id
+#: model:ir.model.fields,help:uto_repair.field_repair_order__product_location_dest_id
+msgid "This is the location where the repaired product is located."
+msgstr "Il s'agit de l'emplacement où se situe le produit réparé."
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_repair_order_form_inherit
+msgid ""
+"This will update all taxes based on the currently selected fiscal position."
+msgstr ""
+"Ceci mettra à jour toutes les taxes basées sur la position fiscale "
+"actuellement sélectionnée."
+
+#. module: uto_repair
+#. odoo-python
+#: code:uto_repair/models/repair.py:0
+msgid "Title"
+msgstr "Titre"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_stock_move__price_total
+msgid "Total"
+msgstr ""
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_stock_move__price_tax
+msgid "Total Tax"
+msgstr "Taxe totale"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_invoice_tree_inherit
+msgid "Total excluding tax"
+msgstr "Total HT"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_invoice_tree_inherit
+msgid "Total including tax"
+msgstr "Total TTC"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_brand_brand__brand_type
+#: model:ir.model.fields,field_description:uto_repair.field_code_code__code_type
+#: model:ir.model.fields,field_description:uto_repair.field_ecosystem_ecologic_catalog__catalog_type
+#: model:ir.model.fields,field_description:uto_repair.field_repair_brand__brand_type
+#: model:ir.model.fields,field_description:uto_repair.field_repair_code__code_type
+#: model:ir.model.fields,field_description:uto_repair.field_stock_move__repair_product_line_type
+msgid "Type"
+msgstr ""
+
+#. module: uto_repair
+#: model:repair.state,name:uto_repair.state_4
+#: model:repair.state.helper,name:uto_repair.state_helper_4
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_repair_order_form_filter_inherit
+msgid "Under Repair"
+msgstr "En réparation"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_stock_move__price_unit
+msgid "Unit Price"
+msgstr "Prix unitaire"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__unlock_code
+msgid "Unlock code"
+msgstr "Code de déverrouillage"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_repair_order_form_inherit
+msgid "Update Taxes"
+msgstr "Mettre à jour les taxes"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_repair_order_form_inherit
+msgid "Upload Files"
+msgstr "Téléverser les fichiers"
+
+#. module: uto_repair
+#. odoo-python
+#: code:uto_repair/models/repair.py:0
+msgid "Upload error: %s"
+msgstr "Erreur de téléversement : %s"
+
+#. module: uto_repair
+#: model:ir.model.fields,help:uto_repair.field_repair_state__sequence
+msgid "Used to order states. Lower is better."
+msgstr ""
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_repair_order_form_inherit
+msgid "Validate"
+msgstr "Valider"
+
+#. module: uto_repair
+#: model:ir.model.fields.selection,name:uto_repair.selection__account_move__state__posted
+#: model:ir.model.fields.selection,name:uto_repair.selection__sale_order__state__sale
+msgid "Validated"
+msgstr "Validé"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_invoice_include_bonus
+msgid "Vendor Bill"
+msgstr "Facture fournisseur"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_invoice_include_bonus
+msgid "Vendor Credit Note"
+msgstr "Note de crédit du fournisseur"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_invoice_include_bonus
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_saleorder_inherit
+msgid "WH/RO/00001x"
+msgstr ""
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_repair_order_form_filter_inherit
+msgid "Waiting"
+msgstr "En attente"
+
+#. module: uto_repair
+#: model:repair.state,name:uto_repair.state_3
+#: model:repair.state.helper,name:uto_repair.state_helper_3
+msgid "Waiting For Parts"
+msgstr "En attente de pièces"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_accessories_provided__name
+msgid "name"
+msgstr "nom"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__product_to_repair_type
+msgid "product to repair type"
+msgstr "Type du produit à réparer"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__claim_creation_date
+msgid "Claim Creation Date"
+msgstr "Date de création de la demande"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__claim_organization
+msgid "Concerned Organization"
+msgstr "Eco-organisme concerné"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__eventual_comments
+msgid "Eventual Comments"
+msgstr "Commentaire éventuel"
+
+#. module: uto_repair
+#: model:ir.actions.act_window,name:repair.action_repair_order_tree
+msgid "Repairs"
+msgstr "Réparations"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__name
+msgid "Reference"
+msgstr "Référence"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__complement_repair_product
+msgid "Complement Repair Product"
+msgstr "Produit de réparation complémentaire"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__schedule_date_date
+msgid "Scheduled Date"
+msgstr "Date planifiée"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_repair_order_form_inherit
+msgid "Add internal notes."
+msgstr "Ajouter des notes internes."
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__other_product_to_repair
+msgid "Other Product"
+msgstr "Autre produit"
+
+#. module: uto_repair
+#: model:ir.model.fields,help:uto_repair.field_repair_order__other_product_to_repair
+msgid "Product not in the pre-defined list"
+msgstr "Produit ne figurant pas dans la liste prédéfinie"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__is_cable
+msgid "Cable is left"
+msgstr "Câble déposé"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__is_phone_case
+msgid "Phone Case is left"
+msgstr "Coque déposée"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__device_capacity_id
+msgid "Capicity"
+msgstr "Capacité"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__device_color_id
+msgid "Color"
+msgstr "Couleur"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__commercial_reference_id
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_commercial_reference_form
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_commercial_reference_list
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_commercial_reference_search
+#: model:ir.actions.act_window,name:uto_repair.action_repair_accessories
+#: model:ir.ui.menu,name:uto_repair.repair_menu_commercial_reference
+msgid "Commercial Reference"
+msgstr "Référence commerciale"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_commercial_reference__name
+msgid "Label"
+msgstr "Libellé"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_repair_order_form_inherit
+msgid "Notes and Photos"
+msgstr "Notes & Photos"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_repair_order_form_inherit
+msgid "Notes and intervention photos"
+msgstr "Notes & Photos d'intervention"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_repair_order_form_inherit
+msgid "Diagnostic and Accessories"
+msgstr "Diagnostic & Accessoires"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_repair_order_form_inherit
+msgid "Device"
+msgstr "Appareil"
+
+#. module: uto_repair
+#. odoo-python
+#: code:uto_repair/models/utils.py:0
+#: model:ir.model,name:uto_repair.model_commercial_reference
+msgid "The label must be unique per brand."
+msgstr "Le libellé doit être unique pour chaque marque."
+
+#. module: uto_repair
+#. odoo-python
+#: code:uto_repair/models/utils.py:0
+#: model:ir.model,name:uto_repair.model_commercial_reference
+msgid "The label must be unique."
+msgstr "Le libellé doit être unique."
+
+#. module: uto_repair
+#: model_terms:ir.actions.act_window,help:uto_repair.action_repair_accessories
+msgid "Create a new Commercial Reference"
+msgstr "Créer une nouvelle Référence commerciale"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__visual_condition
+msgid "Visual Condition"
+msgstr "État visuel à la réception"

@@ -1,0 +1,9 @@
+# -*- coding: utf-8 -*-
+
+from odoo import models
+
+class HrEmployee(models.Model):
+    _inherit = "hr.employee"
+
+class ResourceResource(models.Model):
+    _inherit = "resource.resource"

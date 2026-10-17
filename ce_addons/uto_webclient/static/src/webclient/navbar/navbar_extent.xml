@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="wub.Sidenav.Item.inherit" t-inherit="wub.Sidenav.Item" t-inherit-mode="primary">
+        <xpath expr="//DropdownItem" position="replace">
+            <DropdownItem class="{'nav-link':true, 'on': isCurrentApp(app)}"
+                attrs="{ href: getMenuItemHref(app), 'data-menu-xmlid': app.xmlid, 'data-section': app.id }"
+                onSelected="(ev) => this.onSelectMenu(app)">
+
+                <t t-set="app" t-value="revealAcion(app)"/>
+                <div class="icon text-center d-flex align-items-center justify-content-center"
+                    t-attf-style="background-color: {{app.webIcon?.backgroundColor}};">
+                    <img t-if="app.webIconData" t-att-src="app.webIconData"/>
+                    <div t-else="" class="u_app_icon position-relative d-flex justify-content-center align-items-center ratio ratio-1x1">
+                        <i t-attf-class="{{app.webIcon.iconClass}} position-relative w-auto h-auto lh-1" 
+                            t-attf-style="color: {{app.webIcon.color}};"/>
+                    </div>
+                </div>
+                <span t-out="app.label or app.name" class="nav-title text-truncate ms-3" t-att-title="app.label or app.name"/>
+            </DropdownItem>
+        </xpath>
+    </t>
+</templates>

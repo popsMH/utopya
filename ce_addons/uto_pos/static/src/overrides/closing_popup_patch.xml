@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="uto_pos.ClosePosPopup" t-inherit="point_of_sale.ClosePosPopup" t-inherit-mode="extension">
+
+        <!-- 1. Titre du bloc espèces : "Cash" → "Espèces" -->
+        <xpath expr="//div[contains(@class,'payment-methods-overview')]/div[@t-if='pos.config.cash_control']/div[contains(@class,'fs-3')]/span[@t-esc='props.default_cash_details.name']" position="replace">
+            <span>Espèces</span>
+        </xpath>
+
+        <!-- 2. Masquer Customer Account dans le récapitulatif (type pay_later) -->
+        <xpath expr="//div[@t-foreach='props.non_cash_payment_methods'][@t-as='pm'][t[@t-set='diff']]" position="attributes">
+            <attribute name="t-if">pm.type !== 'pay_later'</attribute>
+        </xpath>
+
+        <!-- 3. Nom moyen de paiement CB : "pm.name" → "Carte Bancaire (CB)" pour type bank -->
+        <xpath expr="//div[@t-foreach='props.non_cash_payment_methods'][@t-as='pm'][t[@t-set='diff']]/div[contains(@class,'fs-3')]/span[@t-esc='pm.name']" position="replace">
+            <span t-if="pm.type === 'bank'">Carte Bancaire (CB)</span>
+            <span t-else="" t-esc="pm.name" />
+        </xpath>
+
+        <!-- 4. Bloc QualiRépar (après les modes de paiement, avant le séparateur) -->
+        <xpath expr="//div[contains(@class,'payment-methods-overview')]" position="inside">
+            <div class="w-100 mb-3" t-if="qualiReparState.loaded and qualiReparState.configured">
+                <div class="d-flex align-items-center justify-content-between fs-3">
+                    <span>Bonus QualiRépar</span>
+                    <span t-esc="env.utils.formatCurrency(qualiReparState.total)" />
+                </div>
+                <div class="d-flex align-items-center justify-content-between text-muted border-start ps-2">
+                    <span>Total accordé aujourd'hui</span>
+                    <span t-esc="env.utils.formatCurrency(qualiReparState.total)" />
+                </div>
+            </div>
+        </xpath>
+
+        <!-- 5. Label comptage espèces : "Cash Count" → "Espèces comptées dans le tiroir" -->
+        <xpath expr="//div[@t-if='pos.config.cash_control'][@class='mb-3']/label" position="replace">
+            <label class="form-label">Espèces comptées dans le tiroir</label>
+        </xpath>
+
+        <!-- 6. Masquer Customer Account dans la section comptage -->
+        <xpath expr="//div[@t-foreach='props.non_cash_payment_methods'][@t-as='pm'][t[@t-if='_showDiff']]" position="attributes">
+            <attribute name="t-if">pm.type !== 'pay_later'</attribute>
+        </xpath>
+
+        <!-- 7. Label comptage CB : "[pm.name] Count" → "Montant CB (Ticket Z du TPE)" -->
+        <xpath expr="//div[@t-foreach='props.non_cash_payment_methods'][@t-as='pm'][t[@t-if='_showDiff']]/t[@t-if='_showDiff']/span" position="replace">
+            <span>Montant CB (Ticket Z du TPE)</span>
+        </xpath>
+
+        <!-- 8. Note d'ouverture : traduire "Opening details:" généré par le système -->
+        <xpath expr="//textarea[contains(@class,'opening-notes')]/t[@t-esc='props.opening_notes']" position="replace">
+            <t t-esc="displayOpeningNotes" />
+        </xpath>
+
+        <!-- 9. Bouton "Discard" / "Ignorer" → "Retour à la caisse" -->
+        <xpath expr="//button[@t-on-click='cancel']" position="replace">
+            <button class="button btn btn-secondary" t-att-disabled="!canCancel()" t-on-click="cancel" t-att-class="this.ui.isSmall ? 'w-100' : 'btn-lg'">Retour à la caisse</button>
+        </xpath>
+
+        <!-- 10. Bouton "Cash In/Out" / "Cash entrant/sortant" → "Mouvement de caisse" -->
+        <xpath expr="//button[@t-on-click='() => this.cashMove()']" position="replace">
+            <button class="button btn btn-secondary" t-att-class="this.ui.isSmall ? 'w-100' : 'btn-lg'" t-on-click="() => this.cashMove()">Mouvement de caisse</button>
+        </xpath>
+
+    </t>
+
+</templates>

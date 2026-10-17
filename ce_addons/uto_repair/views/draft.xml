@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ================= FORM VIEW ================= -->
+
+
+    <!-- ================= LIST (TREE) VIEW ================= -->
+    <!-- ================= SEARCH VIEW ================= -->
+
+    <record id="view_repair_order_search_inherit" model="ir.ui.view">
+        <field name="name">repair.search.inherit</field>
+        <field name="model">repair.order</field>
+        <field name="inherit_id" ref="repair.view_repair_order_form_filter"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='product_id']" position="after">
+                <field name="catalog_catalog_id"/>
+            </xpath>
+
+            <xpath expr="//filter[@name='filter_draft']" position="replace">
+                <filter string="Draft"
+                        name="filter_draft"
+                        domain="[('state_id.sequence', '=', 1)]"/>
+            </xpath>
+
+            <xpath expr="//filter[@name='filter_under_repair']" position="replace">
+                <filter string="Under Repair"
+                        name="filter_under_repair"
+                        domain="[('state_id.sequence', '=', 4)]"/>
+            </xpath>
+
+            <xpath expr="//filter[@name='filter_done']" position="replace">
+                <filter string="Repaired"
+                        name="filter_repaired"
+                        domain="[('state_id.sequence', '=', 5)]"/>
+                <filter string="Done"
+                        name="filter_done"
+                        domain="[('state_id.is_done', '=', True)]"/>
+            </xpath>
+
+            <xpath expr="//filter[@name='filter_cancel']" position="replace">
+                <filter string="Cancelled"
+                        name="filter_cancel"
+                        domain="[('state_id.is_cancelled', '=', True)]"/>
+            </xpath>
+
+            <xpath expr="//group/filter[@name='product']" position="replace">
+                <filter string="Product"
+                        name="product"
+                        domain="[]"
+                        context="{'group_by': 'catalog_catalog_id'}"/>
+            </xpath>
+
+            <xpath expr="//group/filter[@name='status']" position="replace">
+                <filter string="Status"
+                        name="status"
+                        domain="[]"
+                        context="{'group_by': 'state_id'}"/>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>

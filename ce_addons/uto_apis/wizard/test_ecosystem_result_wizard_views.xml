@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="test_ecosystem_result_wizard_form" model="ir.ui.view">
+            <field name="name">Test Ecosystem Result Wizard</field>
+            <field name="model">test.ecosystem.result.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="status" widget="radio"/>
+                        <field name="message"/>
+                    </group>
+                    <footer>
+                        <button name="action_close" string="Close" type="object" class="btn-primary"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="test_ecosystem_result_wizard_action" model="ir.actions.act_window">
+            <field name="name">Test Ecosystem Result</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">test.ecosystem.result.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,12 @@
+/*
+ * Hash NF525 (loi de finances / certification française) :
+ * On conserve la signature électronique mais on réduit sa taille
+ * pour qu'elle reste légale sans dominer visuellement le ticket.
+ * La div cible est injectée par l10n_fr_pos_cert dans
+ * div.pos-receipt-order-data > div[style*="word-wrap"].
+ */
+.pos-receipt .pos-receipt-order-data > div[style*="word-wrap"] {
+    font-size: 0.45rem;
+    color: #bbb;
+    line-height: 1.2;
+}

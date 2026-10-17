@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_irreparability_certificate_wizard_form" model="ir.ui.view">
+        <field name="name">repair.irreparability.certificate.wizard.form</field>
+        <field name="model">repair.irreparability.certificate.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Générer Certificat d'Irréparabilité">
+                <group>
+                    <field name="repair_order_id" />
+                    <field name="motif_irreparabilite" required="1" />
+                    <field name="motif_irreparabilite_autre" 
+                        invisible="motif_irreparabilite != 'autre'" 
+                        required="motif_irreparabilite == 'autre'"
+                        placeholder="Décrivez le motif de l'irréparabilité..." />
+                </group>
+                <footer>
+                    <button name="action_generate_certificate" 
+                        type="object" 
+                        string="Générer et Télécharger le Certificat" 
+                        class="oe_highlight" />
+                    <button string="Annuler" class="btn-secondary" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

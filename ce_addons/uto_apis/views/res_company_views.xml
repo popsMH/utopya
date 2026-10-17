@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_company_form_inherit_extend" model="ir.ui.view">
+        <field name="name">res.company.form.inherit.extend</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="account.view_company_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//chatter" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//notebook" position="inside">
+                <page string="QualiRépar" name="quali_repar">
+                    <group>
+                        <field name="is_quali_repar" widget="boolean_toggle"/>
+                    </group>
+                    <group invisible="not is_quali_repar">
+                        <group string="API Ecosystem">
+                            <field name="ecosystem_api_username"/>
+                            <field name="ecosystem_api_password" password="True"/>
+                            <button name="action_test_ecosystem" type="object" class="btn btn-primary" string="Test"/>
+                        </group>
+                        <group string="API Ecologic">
+                            <field name="ecologic_api_key" password="True"/>
+                            <button name="action_test_ecologic" type="object" class="btn btn-primary" string="Test"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="view_company_form_inherit_om_extend" model="ir.ui.view">
+        <field name="name">res.company.form.inherit.om.extend</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="udoo_om_ux.res_company_form_inherit_om"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='menus_preset']/.."
+                position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="view_company_form_inherit" model="ir.ui.view">
+        <field name="name">res.company.form.inherit</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='company_registry']"
+                position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='mobile']"
+                position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='color']"
+                position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='currency_id']"
+                position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="res_company_form_l10n_fr_inherit" model="ir.ui.view">
+        <field name="name">res.company.form.l10n.fr.inherit</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="l10n_fr.res_company_form_l10n_fr"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='ape']"
+                position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="res_company_form_mail_inherit" model="ir.ui.view">
+        <field name="name">res.company.form.mail.inherit</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="mail.res_company_view_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='alias_domain_id']"
+                position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,107 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* uto_sale_subscription
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0+e-20250203\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-27 09:14+0000\n"
+"PO-Revision-Date: 2025-09-27 09:14+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: uto_sale_subscription
+#: model:ir.model.fields,field_description:uto_sale_subscription.field_product_template__product_offer_type
+msgid "Product Offer Type"
+msgstr "Type d'offre de produit"
+
+#. module: uto_sale_subscription
+#: model:ir.model.fields,field_description:uto_sale_subscription.field_sale_order__subscription_offer_type
+msgid "Subscription Offer Type"
+msgstr "Type d'offre d'abonnement"
+
+#. module: uto_sale_subscription
+#. odoo-python
+#: code:utopya-optline/uto_sale_subscription/models/sale_order.py:0
+msgid "No URL specified"
+msgstr "Aucune URL spécifiée"
+
+#. module: uto_sale_subscription
+#. odoo-python
+#: code:utopya-optline/uto_sale_subscription/models/sale_order.py:0
+msgid "Invalid URL"
+msgstr "URL non valide"
+
+#. module: uto_sale_subscription
+#. odoo-python
+#: code:utopya-optline/uto_sale_subscription/models/sale_order.py:0
+msgid "Succesful Connection"
+msgstr "Connexion réussie"
+
+#. module: uto_sale_subscription
+#. odoo-python
+#: code:utopya-optline/uto_sale_subscription/models/sale_order.py:0
+msgid "Failed Connection"
+msgstr "Échec de la connexion"
+
+#. module: uto_sale_subscription
+#. odoo-python
+#: code:utopya-optline/uto_sale_subscription/models/sale_order.py:0
+msgid "Community API error: {res.text}"
+msgstr "Erreur de l'API communautaire : {res.text}"
+
+#. module: uto_sale_subscription
+#. odoo-python
+#: code:utopya-optline/uto_sale_subscription/models/sale_order.py:0
+msgid "Something is wrong with company creation, please reach out the admin. error : %s"
+msgstr "Il y a un problème avec la création de l'entreprise, veuillez contacter l'administrateur. Erreur : %s"
+
+#. module: uto_sale_subscription
+#. odoo-python
+#: code:utopya-optline/uto_sale_subscription/models/sale_order.py:0
+msgid "Community API error: %s"
+msgstr "Erreur de l'API communautaire : %s"
+
+#. module: uto_sale_subscription
+#. odoo-python
+#: code:utopya-optline/uto_sale_subscription/models/sale_order.py:0
+msgid "Community company created: %s"
+msgstr "Compagnie communautaire créée : %s"
+
+#. module: uto_sale_subscription
+#. odoo-python
+#: code:utopya-optline/uto_sale_subscription/models/sale_order.py:0
+msgid "Community company archived: %s"
+msgstr "Compagnie communautaire archivée : %s"
+
+#. module: uto_sale_subscription
+#. odoo-python
+#: code:utopya-optline/uto_sale_subscription/models/sale_order.py:0
+msgid "Community company unarchived: %s"
+msgstr "Compagnie communautaire désarchivée : %s"
+
+#. module: uto_sale_subscription
+#. odoo-python
+#: code:utopya-optline/uto_sale_subscription/models/sale_order.py:0
+msgid "No odoo community URL found in the settings"
+msgstr "Aucune URL de Odoo communautaire trouvée dans le Paramètre !"
+
+#. module: uto_sale_subscription
+#: model_terms:ir.ui.view,arch_db:uto_sale_subscription.res_config_settings_view_form
+msgid "Odoo Community Instance"
+msgstr "Instance de Odoo communautaire"
+
+#. module: uto_sale_subscription
+#: model_terms:ir.ui.view,arch_db:uto_sale_subscription.res_config_settings_view_form
+msgid "Odoo Community Instance"
+msgstr "Instance de Odoo communautaire"
+
+#. module: uto_sale_subscription
+#: model_terms:ir.ui.view,arch_db:uto_sale_subscription.res_config_settings_view_form
+msgid "URL of the Community Odoo Instance"
+msgstr "URL de l'instance Odoo communautaire"

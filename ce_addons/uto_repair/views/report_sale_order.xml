@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_saleorder_inherit" inherit_id="sale.report_saleorder_document">
+        <xpath expr="//div[@id='informations']" position="after">
+            <div class="oe_structure"></div>
+            <div
+                id="informations" class="row mb-4"
+                t-if="doc.is_linked_to_repair_order_phone">
+                <div class="col" name="ro_name">
+                    <strong>Repair Order</strong>
+                    <div t-field="doc.ro_name">WH/RO/00001x</div>
+                </div>
+                <div class="col" name="ro_product_to_repair_brand">
+                    <strong>Brand</strong>
+                    <div t-field="doc.ro_product_to_repair_brand">Phone</div>
+                </div>
+                <div class="col" name="ro_product_to_repair_device">
+                    <strong>Device</strong>
+                    <div t-field="doc.ro_product_to_repair_device">Iphone 12</div>
+                </div>
+                <div class="col" name="ro_product_to_repair_device_id">
+                    <strong>Device ID</strong>
+                    <div t-field="doc.ro_product_to_repair_device_id">1234DFG345</div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>

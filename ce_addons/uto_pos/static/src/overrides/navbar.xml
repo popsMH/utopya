@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="uto_pos.Navbar" t-inherit="point_of_sale.Navbar" t-inherit-mode="extension">
+
+        <!-- Remplacer le logo Odoo par le logo de la société -->
+        <xpath expr="//img[contains(@class,'pos-logo')]" position="replace">
+            <img class="pos-logo mw-100" height="42"
+                 t-on-click="() => debug.toggleWidget()"
+                 t-attf-src="/web/image?model=res.company&amp;id={{pos.company.id}}&amp;field=logo"
+                 t-att-alt="pos.company.name" />
+        </xpath>
+
+        <!-- Masquer "Install App" (installation PWA = tâche admin, pas caissier) -->
+        <xpath expr="//DropdownItem[contains(@onSelected,'appUrl')]" position="replace"/>
+
+        <!-- Renommer "Cash In/Out" → "Mouvement de caisse" -->
+        <xpath expr="//DropdownItem[contains(@onSelected,'cashMove')]" position="replace">
+            <DropdownItem t-if="showCashMoveButton" onSelected="() => this.pos.cashMove()">
+                Mouvement de caisse
+            </DropdownItem>
+        </xpath>
+
+        <!-- Renommer "Backend" → "Menu Principal" -->
+        <xpath expr="//DropdownItem[contains(@onSelected,'closePos')]" position="replace">
+            <DropdownItem onSelected="() => pos.closePos()">
+                Menu Principal
+            </DropdownItem>
+        </xpath>
+
+    </t>
+
+</templates>

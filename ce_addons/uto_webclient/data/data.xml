@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <record id="param_odoo_enterprise_url" model="ir.config_parameter">
+            <field name="key">enterprise_config.odoo_enterprise_url</field>
+            <field name="value">https://enterprise.example.com</field>
+        </record>
+
+    </data>
+</odoo>

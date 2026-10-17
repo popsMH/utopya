@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <!--
+        Héritage unique sur point_of_sale.ControlButtons.
+        Grâce à la dépendance pos_sale, son extension (Quotation/Order) est déjà
+        compilée dans le template avant que uto_pos ne s'applique.
+    -->
+    <t t-name="uto_pos.ControlButtons" t-inherit="point_of_sale.ControlButtons" t-inherit-mode="extension">
+        <!-- Masquer le bouton "Note interne" de la barre principale (OrderlineNoteButton avec getter) -->
+        <xpath expr="//t[OrderlineNoteButton[@getter]]" position="replace"/>
+        <!-- Masquer "Note générale" dans la modal Actions -->
+        <xpath expr="//div[contains(@class,'control-buttons-modal')]/OrderlineNoteButton[@label]" position="replace"/>
+        <!-- Masquer Liste de prix -->
+        <xpath expr="//button[contains(@class,'o_pricelist_button')]" position="replace"/>
+        <!-- Renommer "Quotation/Order" (ajouté par pos_sale) → "Importer Devis" -->
+        <xpath expr="//button[contains(@t-on-click,'onClickQuotation')]" position="replace">
+            <button t-att-class="buttonClass" t-on-click="() => this.onClickQuotation()">
+                <i class="fa fa-link me-1" role="img" aria-label="Importer Devis" title="Importer Devis"/> Importer Devis
+            </button>
+        </xpath>
+        <!-- Renommer "Cancel Order" → "Annuler l'encaissement" -->
+        <xpath expr="//button[contains(@t-on-click,'onDeleteOrder')]" position="replace">
+            <button class="btn btn-secondary btn-lg py-5" t-on-click="() => this.pos.onDeleteOrder(this.pos.get_order())">
+                <i class="fa fa-trash me-1" role="img"/> Annuler l'encaissement
+            </button>
+        </xpath>
+    </t>
+
+</templates>

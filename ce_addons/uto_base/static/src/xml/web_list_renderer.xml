@@ -1,0 +1,4 @@
+<t t-inherit="web.ListRenderer" t-inherit-mode="extension">
+    <xpath expr="//Dropdown/t[@t-set-slot='content']/t[@t-if='this.udooEditable ? this.isUdooEditable() : false']" position="replace">
+    </xpath>
+</t>

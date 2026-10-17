@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_irreparability_certificate_document">
+        <t t-foreach="docs" t-as="doc">
+            <t t-call="web.html_container">
+                <t t-call="web.basic_layout">
+                    <div class="page">
+                        <!-- Header avec logo et informations du magasin -->
+                        <div class="row mb-4">
+                            <div class="col-8">
+                                <t t-if="doc.company_id.logo">
+                                    <img t-att-src="image_data_uri(doc.company_id.logo)" 
+                                        style="max-height: 100px;" alt="Logo"/>
+                                </t>
+                                <h2 t-esc="doc.company_id.name" class="mt-2"/>
+                                <div t-esc="doc.company_id.street"/>
+                                <div>
+                                    <span t-esc="doc.company_id.zip"/>
+                                    <span t-esc="doc.company_id.city"/>
+                                </div>
+                                <div>Téléphone : <span t-esc="doc.company_id.partner_id.phone or doc.company_id.phone"/></div>
+                                <div>Email : <span t-esc="doc.company_id.email"/></div>
+                                <div>N° SIRET : <span t-esc="doc.company_id.siret or doc.company_id.vat"/></div>
+                            </div>
+                            <div class="col-4 text-end">
+                                
+                            </div>
+                        </div>
+
+                        <hr/>
+
+                        <!-- Corps du certificat -->
+                        <p class="mt-3"><h3>CERTIFICAT D'IRRÉPARABILITÉ</h3> Document N° : <strong t-esc="doc.name"/></p>
+                        <div class="mt-4">
+                            <p>Je soussigné(e), 
+                            <t t-if="doc.assigned_technician">
+                                <strong t-esc="doc.assigned_technician.name"/>
+                            </t>
+                            <t t-else="">
+                                <strong t-esc="user.name"/>
+                            </t>
+                            agissant en qualité de technicien spécialisé pour la société <strong t-esc="doc.company_id.name"/>,
+                            certifie par la présente avoir examiné l'appareil suivant :</p>
+
+                            <!-- Informations sur l'appareil -->
+                            <div class="row mb-4">
+                                <div class="col-8">
+                                    <div>Type d'appareil : <span t-if="doc.catalog_catalog_id" t-esc="doc.catalog_catalog_id.name"/><span t-else="" t-esc="doc.other_product_to_repair"/></div>
+                                    <div>Marque : <span t-if="doc.brand_brand_id" t-esc="doc.brand_brand_id.name"/></div>
+                                    <div>Modèle : <span t-esc="doc.commercial_reference"/></div>
+                                    <div>Numéro de Série / IMEI : <span t-esc="doc.device_id"/></div>
+                                </div>
+                                <div class="col-4 text-end">
+                                </div>
+                            </div>
+
+                            <!-- Informations du client -->
+                            <div class="mt-4">
+                                <p>Cet appareil a été déposé dans nos ateliers le <strong t-esc="doc.create_date" t-options='{"widget": "date"}'/> par :</p>
+                                <ul style="list-style: none;">
+                                    <li><strong t-esc="doc.partner_id.name"/></li>
+                                    <li t-esc="doc.partner_id.street" t-if="doc.partner_id.street"/>
+                                    <li>
+                                        <span t-esc="doc.partner_id.zip" t-if="doc.partner_id.zip"/>,
+                                        <span t-esc="doc.partner_id.city" t-if="doc.partner_id.city"/>
+                                    </li>
+                                    <li t-if="doc.partner_id.phone">Téléphone : <span t-esc="doc.partner_id.phone"/></li>
+                                </ul>
+                            </div>
+
+                            <!-- Résultat du diagnostic -->
+                            <div class="mt-4 p-3" style="background-color: #fff3cd; border: 1px solid #ffc107; border-radius: 4px;">
+                                <h4 class="text-danger">RÉSULTAT DU DIAGNOSTIC</h4>
+                                <p>Après une expertise technique complète réalisée le
+                                <strong t-esc="doc.repair_end_date" t-options='{"widget": "date", "format": "dd/MM/yyyy"}' t-if="doc.repair_end_date"></strong>
+                                <strong t-else=""><t t-esc="doc.date_certificat_irreparabilite" t-options='{"widget": "date", "format": "dd/MM/yyyy"}'/></strong>,
+                                nous déclarons cet appareil techniquement et/ou économiquement irréparable.</p>
+
+                                <div class="mt-3">
+                                    <p><strong>Motif(s) de l'irréparabilité :</strong></p>
+                                    <t t-set="motif_label" t-value="dict([('oxidation_severe', 'Oxydation sévère'), ('pieces_obsoletes', 'Pièces obsolètes'), ('cout_reparation', 'Coût de réparation > Valeur appareil'), ('autre', 'Autre')])"/>
+                                    <p class="mb-0" t-if="doc.motif_irreparabilite">
+                                        <span t-esc="motif_label.get(doc.motif_irreparabilite, doc.motif_irreparabilite)"/>
+                                    </p>
+                                    <p t-if="doc.motif_irreparabilite_autre" class="mt-2">
+                                        <em t-esc="doc.motif_irreparabilite_autre"/>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Conclusion -->
+                            <div class="mt-4">
+                                <p>En conséquence, toute intervention de réparation est impossible ou injustifiée. L'appareil est restitué au client en l'état 
+                                (ou orienté vers une filière de recyclage DEEE selon sa volonté). Ce certificat est délivré en un exemplaire unique, pour servir 
+                                et valoir ce que de droit, notamment auprès des compagnies d'assurance pour la constitution d'un dossier de sinistre.</p>
+                            </div>
+
+                            <!-- Signature -->
+                            <div class="row mt-5">
+                                <div class="col-6">
+                                    <p>Fait à <t t-set="company_city" t-value="doc.company_id.partner_id.city or doc.company_id.city"/><t t-if="company_city"><span t-esc="company_city"/></t><t t-else=""><span style="display:inline-block; min-width:160px; border-bottom:1px solid #000;">&#160;</span></t>, le <span t-esc="doc.date_certificat_irreparabilite" t-options='{"widget": "date", "format": "dd/MM/yyyy"}' t-if="doc.date_certificat_irreparabilite"></span>.</p>
+                                </div>
+                                <div class="col-6 text-end">
+                                    <p style="min-height: 80px; border-top: 1px solid #000;">Signature du technicien et Cachet de l'entreprise</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <record id="action_report_irreparability_certificate" model="ir.actions.report">
+        <field name="name">Certificat d'Irréparabilité</field>
+        <field name="model">repair.order</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">uto_repair.report_irreparability_certificate_document</field>
+        <field name="report_file">uto_repair.report_irreparability_certificate_document</field>
+        <field name="print_report_name">'Certificat_Irréparabilité_%s' % object.name</field>
+        <field name="binding_model_id" ref="model_repair_order"/>
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="uto_repair.paperformat_irreparability"/>
+    </record>
+</odoo>

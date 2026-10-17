@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-inherit="web.ListView" t-inherit-mode="extension">
+        <xpath expr="//button[@class='btn btn-outline-primary text-nowrap']" position="replace">
+        </xpath>
+    </t>
+</templates>

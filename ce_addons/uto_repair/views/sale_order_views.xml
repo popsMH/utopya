@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <record id="view_sale_order_form_inherit" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='user_id']" position="before">
+                <field name="is_linked_to_repair_order_phone" invisible="1" />
+                <field name="ro_name" invisible="1" />
+                <field name="ro_product_to_repair_brand" invisible="1" />
+                <field name="ro_product_to_repair_device" invisible="1" />
+                <field name="ro_product_to_repair_device_id" invisible="1" />
+            </xpath>
+
+            <xpath expr="//page[@name='other_information']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='validity_date']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+
+            <xpath expr="//button[@name='action_draft']" position="attributes">
+                <attribute name="string">Set To Draft</attribute>
+            </xpath>
+
+            <xpath expr="//button[@id='send_by_email_primary']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+
+            <xpath expr="//button[@id='send_proforma_primary']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+
+            <xpath expr="//button[@id='send_proforma']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+
+            <xpath expr="//button[@id='send_by_email']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+
+            <xpath expr="//button[@name='action_preview_sale_order']" position="after">
+                <button name="action_print_order" string="Print" type="object" class="btn-secondary"/>
+            </xpath>
+
+            <xpath expr="//field[@name='state']" position="replace">
+                <field name="state" widget="statusbar" statusbar_visible="draft,sale"/>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="sale.action_quotations_with_onboarding" model="ir.actions.act_window">
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="sale.sale_order_action_view_quotation_kanban" model="ir.actions.act_window.view">
+        <field name="act_window_id" eval="False"/>
+    </record>
+
+    <record id="sale_order_tree_inherit" model="ir.ui.view">
+        <field name="name">sale.order.tree.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.sale_order_tree"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='user_id']" position="attributes">
+                <attribute name="column_invisible">True</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='activity_ids']" position="attributes">
+                <attribute name="column_invisible">True</attribute>
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_partner_form_inherit" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='website']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='lang']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='category_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='function']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='mobile']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='state_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='vat']" position="attributes">
+                <attribute name="invisible">not is_company</attribute>
+            </xpath>
+
+            <xpath expr="//span[@name='address_name']/field" position="attributes">
+                <attribute name="invisible">1</attribute>
+                <attribute name="required">0</attribute>
+            </xpath>
+
+            <xpath expr="//span[@name='address_name']/span" position="attributes">
+                <attribute name="invisible">0</attribute>
+            </xpath>
+
+            <div name="button_box" position="inside">
+                <button
+                    class="oe_stat_button"
+                    type="object"
+                    name="action_show_repair"
+                    icon="fa-wrench"
+                    invisible="repair_count == 0"
+                >
+                    <field string="Repairs" name="repair_count" widget="statinfo"/>
+                </button>
+            </div>
+
+        </field>
+    </record>
+
+    <record id="view_partner_form_inherit_base_vat" model="ir.ui.view">
+        <field name="name">res.partner.form.base_vat.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base_vat.view_partner_base_vat_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//label[@for='vat']" position="attributes">
+                <attribute name="invisible">not is_company</attribute>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="view_partner_tree_inherit" model="ir.ui.view">
+        <field name="name">res.partner.list.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_tree"/>
+        <field name="arch" type="xml">
+
+            <list position="attributes">
+                <attribute name="delete">false</attribute>
+                <attribute name="duplicate">false</attribute>
+            </list>
+
+            <xpath expr="//field[@name='mobile']" position="attributes">
+                <attribute name="column_invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='street']" position="attributes">
+                <attribute name="column_invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='state_id']" position="attributes">
+                <attribute name="column_invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='vat']" position="attributes">
+                <attribute name="column_invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='category_id']" position="attributes">
+                <attribute name="column_invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='company_id']" position="attributes">
+                <attribute name="column_invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='user_id']" position="attributes">
+                <attribute name="column_invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='phone']" position="replace">
+                <field name="phone" class="o_force_ltr" />
+            </xpath>
+
+            <xpath expr="//field[@name='email']" position="replace">
+                <field name="email" />
+            </xpath>
+
+            <xpath expr="//field[@name='city']" position="replace">
+                <field name="zip" />
+                <field name="city" />
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="res_partner_view_tree_inherit" model="ir.ui.view">
+        <field name="name">res.partner.list.inherit.account</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="account.res_partner_view_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='invoice_sending_method']" position="attributes">
+                <attribute name="column_invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='invoice_edi_format']" position="attributes">
+                <attribute name="column_invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="web.download_contact">
+        <field name="binding_model_id"/>
+        <field name="binding_view_types"></field>
+    </record>
+
+    <record model="ir.actions.server" id="portal.partner_wizard_action_create_and_open">
+        <field name="binding_model_id"/>
+        <field name="binding_view_types"></field>
+    </record>
+
+    <record model="ir.actions.server" id="account_peppol.partner_action_verify_peppol">
+        <field name="binding_model_id"/>
+        <field name="binding_view_types"></field>
+    </record>
+
+    <record model="ir.actions.act_window" id="sms.res_partner_act_window_sms_composer_multi">
+        <field name="binding_model_id"/>
+        <field name="binding_view_types"></field>
+    </record>
+
+    <record model="ir.actions.act_window" id="mail.action_partner_mass_mail">
+        <field name="binding_model_id"/>
+        <field name="binding_view_types"></field>
+    </record>
+
+    <record id="view_crm_partner_geo_form_inherit" model="ir.ui.view">
+        <field name="name">res.partner.form.base_geolocalize.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base_geolocalize.view_crm_partner_geo_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//page[@name='geo_location']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="res_partner_view_form_inherit_mail_extend" model="ir.ui.view">
+        <field name="name">res.partner.form.mail.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="mail.res_partner_view_form_inherit_mail"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//chatter" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>

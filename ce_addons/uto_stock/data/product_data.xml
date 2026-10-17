@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="product_category_device" model="product.category">
+            <field name="name">Devices</field>
+            <field name="active" eval="True"/>
+            <field name="product_type">consu</field>
+        </record>
+
+        <record id="product_category_accessory" model="product.category">
+            <field name="name">Accessoires</field>
+            <field name="active" eval="True"/>
+            <field name="product_type">consu</field>
+        </record>
+
+        <record id="product_category_spare_part" model="product.category">
+            <field name="name">Pièces Détachées</field>
+            <field name="active" eval="True"/>
+            <field name="product_type">consu</field>
+        </record>
+
+        <record id="product_category_repair" model="product.category">
+            <field name="name">Main d'œuvre &amp; Forfaits</field>
+            <field name="active" eval="True"/>
+            <field name="product_type">service</field>
+        </record>
+
+    </data>
+</odoo>

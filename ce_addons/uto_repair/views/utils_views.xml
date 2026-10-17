@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- real brand from APIs -->
+    <record id="view_repair_brand_form" model="ir.ui.view">
+        <field name="name">repair.brand.form</field>
+        <field name="model">repair.brand</field>
+        <field name="arch" type="xml">
+            <form string="Brand" delete="1" duplicate="0" create="0">
+                <sheet>
+                    <group>
+                        <field name="brand_id"/>
+                        <field name="name"/>
+                        <field name="is_ecosystem_brand"/>
+                        <field name="is_ecologic_brand"/>
+                        <field name="catalog_id"/>
+                        <field name="brand_type" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_repair_brand_list" model="ir.ui.view">
+        <field name="name">repair.brand.list</field>
+        <field name="model">repair.brand</field>
+        <field name="arch" type="xml">
+            <list string="Brand" delete="1" duplicate="0" edit="0" create="0">
+                <field name="brand_id"/>
+                <field name="name"/>             
+                <field name="brand_type" />
+            </list>
+        </field>
+    </record>
+
+    <record id="view_repair_brand_search" model="ir.ui.view">
+        <field name="name">repair.brand.search</field>
+        <field name="model">repair.brand</field>
+        <field name="arch" type="xml">
+            <search string="Brand">
+                <field name="brand_id"/>
+                <field name="name"/>
+                <field name="catalog_id"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_repair_brand" model="ir.actions.act_window">
+        <field name="name">Brand</field>
+        <field name="res_model">repair.brand</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+            Create a new Brand
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="repair_menu_repair_brand" name="Brand" parent="repair.repair_menu_config" action="action_repair_brand" sequence="102" active="False"/>
+
+    <!-- common brand -->
+    <record id="view_brand_brand_form" model="ir.ui.view">
+        <field name="name">brand.brand.form</field>
+        <field name="model">brand.brand</field>
+        <field name="arch" type="xml">
+            <form string="Brand" delete="1" duplicate="0" create="0">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="brand_type" />
+                        <field name="is_available_for_repair" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_brand_brand_list" model="ir.ui.view">
+        <field name="name">brand.brand.list</field>
+        <field name="model">brand.brand</field>
+        <field name="arch" type="xml">
+            <list string="Brand" delete="1" duplicate="0" edit="0" create="0">
+                <field name="name"/>             
+                <field name="brand_type" />
+                <field name="is_available_for_repair" />
+            </list>
+        </field>
+    </record>
+
+    <record id="view_brand_brand_search" model="ir.ui.view">
+        <field name="name">brand.brand.search</field>
+        <field name="model">brand.brand</field>
+        <field name="arch" type="xml">
+            <search string="Brand">
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_brand_brand" model="ir.actions.act_window">
+        <field name="name">Brand</field>
+        <field name="res_model">brand.brand</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+            Create a new Brand
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="repair_menu_brand_brand" name="Brand" parent="repair.repair_menu_config" action="action_brand_brand" sequence="103"/>
+
+    <!-- action server for brand -->
+    <record model="ir.actions.server" id="action_make_brand_available_for_repair">
+        <field name="name">Show or Hide in repair order</field>
+        <field name="model_id" ref="uto_repair.model_brand_brand"/>
+        <field name="binding_model_id" ref="uto_repair.model_brand_brand"/>
+        <field name="state">code</field>
+        <field name="code">
+            if records:
+                action = records._make_it_available_for_repair()
+        </field>
+    </record>
+
+    <!-- common code -->
+    <record id="view_code_code_form" model="ir.ui.view">
+        <field name="name">code.code.form</field>
+        <field name="model">code.code</field>
+        <field name="arch" type="xml">
+            <form string="Code" delete="1" duplicate="0" create="0">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_code_code_list" model="ir.ui.view">
+        <field name="name">code.code.list</field>
+        <field name="model">code.code</field>
+        <field name="arch" type="xml">
+            <list string="Code" delete="1" duplicate="0" edit="0" create="0">
+                <field name="name"/>             
+            </list>
+        </field>
+    </record>
+
+    <record id="view_code_code_search" model="ir.ui.view">
+        <field name="name">code.code.search</field>
+        <field name="model">code.code</field>
+        <field name="arch" type="xml">
+            <search string="Code">
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_code_code" model="ir.actions.act_window">
+        <field name="name">Code</field>
+        <field name="res_model">code.code</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+            Create a new Code
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="repair_menu_code_code" name="Code" parent="repair.repair_menu_config" action="action_code_code" sequence="104" active="False"/>
+
+
+    <!-- Commercial Reference -->
+    <record id="view_commercial_reference_form" model="ir.ui.view">
+        <field name="name">commercial.reference.form</field>
+        <field name="model">commercial.reference</field>
+        <field name="arch" type="xml">
+            <form string="Commercial Reference" delete="1" duplicate="0" create="1">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="brand_brand_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_commercial_reference_list" model="ir.ui.view">
+        <field name="name">commercial.reference.list</field>
+        <field name="model">commercial.reference</field>
+        <field name="arch" type="xml">
+            <list string="Commercial Reference" delete="1" duplicate="0" edit="0" create="1">
+                <field name="name"/>
+                <field name="brand_brand_id"/>             
+            </list>
+        </field>
+    </record>
+
+    <record id="view_commercial_reference_search" model="ir.ui.view">
+        <field name="name">commercial.reference.search</field>
+        <field name="model">commercial.reference</field>
+        <field name="arch" type="xml">
+            <search string="Commercial Reference">
+                <field name="name"/>
+                <field name="brand_brand_id"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_commercial_reference" model="ir.actions.act_window">
+        <field name="name">Commercial Reference</field>
+        <field name="res_model">commercial.reference</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+            Create a new Commercial Reference
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="repair_menu_commercial_reference" name="Commercial Reference" parent="repair.repair_menu_config" action="action_commercial_reference" sequence="109" active="True"/>
+
+</odoo>

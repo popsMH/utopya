@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record model="catalog.catalog" id="smartwatch" forcecreate="True">
+        <field name="name">Smartwatch</field>
+        <field name="is_available_for_repair">True</field>
+    </record>
+</odoo>

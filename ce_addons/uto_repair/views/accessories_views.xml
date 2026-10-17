@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- accessories -->
+    <record id="view_repair_accessories_form" model="ir.ui.view">
+        <field name="name">accessories.provided.form</field>
+        <field name="model">accessories.provided</field>
+        <field name="arch" type="xml">
+            <form string="Accessories Provided">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_repair_accessories_list" model="ir.ui.view">
+        <field name="name">accessories.provided.list</field>
+        <field name="model">accessories.provided</field>
+        <field name="arch" type="xml">
+            <list string="Accessories" editable="bottom">
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_repair_accessories_search" model="ir.ui.view">
+        <field name="name">accessories.provided.search</field>
+        <field name="model">accessories.provided</field>
+        <field name="arch" type="xml">
+            <search string="Accessories">
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_repair_accessories" model="ir.actions.act_window">
+        <field name="name">Accessories</field>
+        <field name="res_model">accessories.provided</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+            Create a new Accessory
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="repair_menu_accessories" name="Accessories" parent="repair.repair_menu_config" action="action_repair_accessories" sequence="99"/>
+
+</odoo>

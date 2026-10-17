@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.ui.menu" id="contacts.menu_contacts">
+        <field name="name">Clients</field>
+        <field name="sequence">1</field>
+    </record>
+
+    <record model="ir.ui.menu" id="contacts.res_partner_menu_contacts">
+        <field name="name">Clients</field>
+    </record>
+
+    <record id="contacts.action_contacts" model="ir.actions.act_window">
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('customer_rank', '&gt;', 0)]</field>
+        <field name="context">{
+            'default_is_company': True,
+            'default_customer_rank': 1,
+        }</field>
+    </record>
+
+    <record id="contacts.action_contacts_view_kanban" model="ir.actions.act_window.view">
+        <field name="act_window_id" eval="False"/>
+    </record>
+
+    <record id="view_partner_tree_inherit" model="ir.ui.view">
+        <field name="name">view.partner.tree.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_tree"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='user_id']" position="attributes">
+                <attribute name="column_invisible">True</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='country_id']" position="attributes">
+                <attribute name="column_invisible">True</attribute>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="res_partner_view_tree_inherit_mail_extent" model="ir.ui.view">
+        <field name="name">view.partner.tree.inherit.extent</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="mail.res_partner_view_tree_inherit_mail"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='activity_ids']" position="attributes">
+                <attribute name="column_invisible">True</attribute>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="view_partner_form_inherit_extent" model="ir.ui.view">
+        <field name="name">view.partner.form.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//page[@name='contact_addresses']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+
+            <xpath expr="//page[@name='sales_purchases']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="view_partner_property_form_inherit_extent" model="ir.ui.view">
+        <field name="name">view.partner.form.inherit.extent</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="account.view_partner_property_form"/>
+        <field name="priority">1</field>
+        <field name="arch" type="xml">
+
+            <xpath expr="//page[@name='accounting']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//page[@name='accounting_disabled']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>

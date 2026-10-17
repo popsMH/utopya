@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="pos_session_sales_details_uto" inherit_id="point_of_sale.pos_session_sales_details">
+
+            <!-- Action 1 : Titre -->
+            <xpath expr="//h2[@id='daily_report_title']" position="replace">
+                <h2 t-if="state == 'closed' or state == 'opened'" id="daily_report_title">
+                    <t t-if="state == 'closed'">État des ventes</t>
+                    <t t-else="">État des ventes en cours</t>
+                </h2>
+            </xpath>
+
+            <!-- Action 1 : Date "As of MM/DD/YYYY" → "Au JJ/MM/AAAA" -->
+            <xpath expr="//span[contains(@class,'badge')]/strong" position="replace">
+                <strong>Au&#160;<span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d/%m/%Y')"/></strong>
+            </xpath>
+
+            <!-- Sections : traductions FR -->
+            <xpath expr="//div[@id='sales']/h6" position="replace">
+                <h6 class="bg-secondary p-1 fw-bold">Ventes</h6>
+            </xpath>
+
+            <xpath expr="//div[@id='taxe_sales']/h6" position="replace">
+                <h6 class="bg-secondary p-1 fw-bold w-50 ms-auto">TVA sur ventes</h6>
+            </xpath>
+
+            <xpath expr="//div[@id='refunds']/h6" position="replace">
+                <h6 class="bg-secondary p-1 fw-bold">Avoirs / Remboursements</h6>
+            </xpath>
+
+            <xpath expr="//div[@id='taxe_refunds']/h6" position="replace">
+                <h6 class="bg-secondary p-1 fw-bold w-50 ms-auto">TVA sur avoirs</h6>
+            </xpath>
+
+            <xpath expr="//t[@id='other_payments']/h6" position="replace">
+                <h6 class="bg-secondary p-1 fw-bold w-50 ms-auto">Paiements</h6>
+            </xpath>
+
+            <xpath expr="//t[@id='closing_session']/h6" position="replace">
+                <h6 class="bg-secondary p-1 fw-bold">Contrôle de session</h6>
+            </xpath>
+
+            <xpath expr="//div[@id='discounts']/h6" position="replace">
+                <h6 class="bg-secondary p-1 fw-bold">Remises</h6>
+            </xpath>
+
+            <!-- Discounts : labels FR -->
+            <xpath expr="//div[@id='discounts']//div[@class='row'][1]//strong" position="replace">
+                <strong>Nombre de remises</strong>
+            </xpath>
+
+            <xpath expr="//div[@id='discounts']//div[@class='row'][2]//strong" position="replace">
+                <strong>Montant des remises</strong>
+            </xpath>
+
+            <!-- Tableau Contrôle de session : en-têtes colonnes FR -->
+            <xpath expr="//t[@id='closing_session']//thead/tr" position="replace">
+                <tr>
+                    <th class="text-start">Intitulé</th>
+                    <th/>
+                    <th class="text-end">Attendu</th>
+                    <th t-if="(state == 'closed' or state == 'multiple') and payments" class="text-end">Compté</th>
+                    <th t-if="(state == 'closed' or state == 'multiple') and payments" class="text-end">Écart</th>
+                </tr>
+            </xpath>
+
+            <!-- Contrôle de session : "Number of transactions" → FR -->
+            <xpath expr="//t[@id='closing_session']//strong[span[@t-out='nbr_orders']]" position="replace">
+                <strong>Nombre de transactions : <span t-out="nbr_orders">10</span></strong>
+            </xpath>
+
+            <!-- Notes d'ouverture / clôture -->
+            <xpath expr="//span[@id='opening_note']/strong" position="replace">
+                <strong>Note d'ouverture :</strong>
+            </xpath>
+
+            <xpath expr="//span[@id='closing_note']/strong" position="replace">
+                <strong>Note de clôture :</strong>
+            </xpath>
+
+        </template>
+    </data>
+</odoo>
