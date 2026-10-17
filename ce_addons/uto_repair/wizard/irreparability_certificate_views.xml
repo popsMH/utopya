@@ -4,21 +4,21 @@
         <field name="name">repair.irreparability.certificate.wizard.form</field>
         <field name="model">repair.irreparability.certificate.wizard</field>
         <field name="arch" type="xml">
-            <form string="Générer Certificat d'Irréparabilité">
+            <form string="Generate Irreparability Certificate">
                 <group>
                     <field name="repair_order_id" />
                     <field name="motif_irreparabilite" required="1" />
                     <field name="motif_irreparabilite_autre" 
                         invisible="motif_irreparabilite != 'autre'" 
                         required="motif_irreparabilite == 'autre'"
-                        placeholder="Décrivez le motif de l'irréparabilité..." />
+                        placeholder="Describe the irreparability reason..." />
                 </group>
                 <footer>
                     <button name="action_generate_certificate" 
                         type="object" 
-                        string="Générer et Télécharger le Certificat" 
+                        string="Generate and Download the Certificate" 
                         class="oe_highlight" />
-                    <button string="Annuler" class="btn-secondary" special="cancel" />
+                    <button string="Cancel" class="btn-secondary" special="cancel" />
                 </footer>
             </form>
         </field>

@@ -3,9 +3,9 @@
     <data noupdate="1">
 
         <!-- =====================================================
-             Catégories POS — 4 métiers, 4 couleurs distinctes
-             color int → classe CSS o_colorlist_item_color_transparent_N
-             8=bleu foncé · 4=teal · 2=orange · 9=vert menthe
+             POS categories — 4 business lines, 4 distinct colors
+             color int → CSS class o_colorlist_item_color_transparent_N
+             8=dark blue · 4=teal · 2=orange · 9=mint green
              ===================================================== -->
 
         <record id="pos_category_device" model="pos.category">
@@ -32,7 +32,7 @@
             <field name="sequence">4</field>
         </record>
 
-        <!-- Configure le POS : barre catégories permanente avec les 4 catégories -->
+        <!-- Configure the POS: permanent category bar with the 4 categories -->
         <function model="pos.config" name="_uto_configure_pos_categories"/>
 
     </data>

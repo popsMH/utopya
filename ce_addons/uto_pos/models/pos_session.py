@@ -5,12 +5,12 @@ class PosSession(models.Model):
     _inherit = "pos.session"
 
     def get_qualirepar_daily_total(self):
-        """Retourne le total des bonus QualiRépar accordés aujourd'hui.
-        Renvoie un dict {configured, total} pour le popup de fermeture de caisse.
+        """Return the total of QualiRépar bonuses granted today.
+        Returns a dict {configured, total} for the register closing popup.
         """
         self.ensure_one()
         journal_model = self.env["account.journal"]
-        # Guard : le module uto_repair peut ne pas être installé
+        # Guard: the uto_repair module may not be installed
         if "is_repair_bonus" not in journal_model._fields:
             return {"configured": False, "total": 0.0}
         bonus_journal = journal_model.search(

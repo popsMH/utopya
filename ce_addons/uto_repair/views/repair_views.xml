@@ -29,20 +29,20 @@
 
             <xpath expr="//sheet/group" position="after">
                 <group>
-                    <!-- Bloc 1: Le Client -->
+                    <!-- Block 1: Customer -->
                     <group string="Client" name="client_group">
                         <field name="partner_id" />
                         <field name="contact_phone" />
                     </group>
                     
-                    <!-- Bloc 2: Info concernant les dates planifiées et company -->
+                    <!-- Block 2: Scheduled dates and company -->
                     <group string="Information" name="info_group">
                         <field name="schedule_date_date" />
                         <field name="repair_end_date" invisible="not is_ro_repaired" />
                         <field name="company_id" />
                     </group>
                     
-                    <!-- Bloc 3: L'Appareil (Ordre strict exigé) -->
+                    <!-- Block 3: Device (strict order required) -->
                     <group string="Device" name="device_group">
                         <field name="catalog_id" readonly="is_ro_repaired or is_ro_done or is_ro_cancelled" options="{'no_create': True}" invisible="1" />
                         <field name="catalog_catalog_id" readonly="is_ro_repaired or is_ro_done or is_ro_cancelled" options="{'no_create': True}" />
@@ -66,7 +66,7 @@
                         <field name="code_code_id" readonly="is_ro_repaired or is_ro_done or is_ro_cancelled" options="{'no_create': True}" />
                     </group>
                     
-                    <!-- Bloc 4: Diagnostic & Accessoires -->
+                    <!-- Block 4: Diagnostic & Accessories -->
                     <group string="Diagnostic and Accessories" name="diagnostic_group">
                         <field name="failure_description" readonly="is_ro_repaired or is_ro_done or is_ro_cancelled" invisible="product_to_repair_type != 'ecologic'" />
                         <field name="is_phone_case" readonly="is_ro_repaired or is_ro_done or is_ro_cancelled" widget="boolean_toggle" />
@@ -84,14 +84,14 @@
                     </group>
                 </group>
                 
-                <!-- Bloc 5: Notes & Photos d'intervention (Full Width) -->
+                <!-- Block 5: Notes & intervention photos (full width) -->
                 <group string="Notes and Photos" name="notes_group" colspan="2">
                     <field name="internal_notes" string="Notes and intervention photos" placeholder="Add internal notes." />
                     <field name="visual_condition" readonly="is_ro_repaired or is_ro_done or is_ro_cancelled" />
                 </group>
 
-                <!-- Bloc 6: Certificat d'Irréparabilité -->
-                <group string="Certificat d'Irréparabilité" name="irreparability_group" invisible="not motif_irreparabilite">
+                <!-- Block 6: Irreparability certificate -->
+                <group string="Irreparability Certificate" name="irreparability_group" invisible="not motif_irreparabilite">
                     <field name="motif_irreparabilite" readonly="1" />
                     <field name="motif_irreparabilite_autre" readonly="1" />
                     <field name="date_certificat_irreparabilite" readonly="1" />
@@ -183,7 +183,7 @@
 
                     <button name="action_open_irreparability_wizard"
                         type="object"
-                        string="Générer Certificat Irréparabilité"
+                        string="Generate Irreparability Certificate"
                         class="oe_highlight"
                         invisible="not show_validate_button"/>
 

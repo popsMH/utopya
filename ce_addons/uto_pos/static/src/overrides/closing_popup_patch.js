@@ -1,6 +1,7 @@
 import { patch } from "@web/core/utils/patch";
 import { ClosePosPopup } from "@point_of_sale/app/navbar/closing_popup/closing_popup";
 import { useState } from "@odoo/owl";
+import { _t } from "@web/core/l10n/translation";
 
 patch(ClosePosPopup.prototype, {
     setup() {
@@ -25,22 +26,22 @@ patch(ClosePosPopup.prototype, {
         this.qualiReparState.loaded = true;
     },
 
-    // Traduit "Opening details:" en "Détail de l'ouverture :" dans la note affichée
+    // Relabel the system-generated "Opening details:" / "Closing details:" in the displayed note
     get displayOpeningNotes() {
         if (!this.props.opening_notes) {
             return this.props.opening_notes;
         }
         return this.props.opening_notes
-            .replace(/Opening details:/g, "Détail du fond de caisse :")
-            .replace(/Closing details:/g, "Détail de clôture :");
+            .replace(/Opening details:/g, _t("Opening cash details:"))
+            .replace(/Closing details:/g, _t("Closing details:"));
     },
 
-    // Génère automatiquement le rapport de clôture avant de fermer la session
+    // Automatically generate the closing report before closing the session
     async closeSession() {
         try {
             await this.downloadSalesReport();
         } catch {
-            // Ne pas bloquer la fermeture si la génération du rapport échoue
+            // Do not block closing if the report generation fails
         }
         return super.closeSession();
     },

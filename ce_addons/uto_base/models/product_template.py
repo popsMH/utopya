@@ -6,7 +6,7 @@ from odoo import models, fields, api
 class ProductTemplate(models.Model):
     _inherit = 'product.template'
 
-    is_occasion = fields.Boolean(string="Produit d'occasion", default=False)
+    is_occasion = fields.Boolean(string="Second-hand Product", default=False)
 
     @api.onchange('is_occasion')
     def _onchange_is_occasion(self):

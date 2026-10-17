@@ -19,8 +19,8 @@ class PosConfig(models.Model):
 
     @api.model
     def action_open_pos_direct(self):
-        """Si une seule caisse existe pour la société, ouvrir directement l'interface POS.
-        Sinon, retomber sur le tableau de bord kanban standard."""
+        """If a single register exists for the company, open the POS interface directly.
+        Otherwise, fall back to the standard kanban dashboard."""
         config = self.search([('company_id', '=', self.env.company.id)], limit=1)
         if config:
             return config.open_ui()
@@ -28,8 +28,8 @@ class PosConfig(models.Model):
 
     @api.model
     def _uto_configure_pos_categories(self):
-        """Appelé une fois à l'install : active la barre catégories sur le POS
-        et y attache les 4 catégories métier."""
+        """Called once at install: enable the category bar on the POS
+        and attach the 4 business categories to it."""
         categories = self.env['pos.category'].search([
             ('name', 'in', ['Devices', 'Accessoires', 'Pièces Détachées', "Main d'œuvre & Forfaits"]),
         ])

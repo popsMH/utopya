@@ -64,3 +64,14 @@ msgstr "Appareil"
 #: model:product.category,name:uto_stock.product_category_repair
 msgid "Repair"
 msgstr "Réparation"
+
+#. module: uto_stock
+#: model:ir.model.fields.selection,name:uto_stock.selection__product_category__product_type__consu
+msgid "Goods (Storable)"
+msgstr "Bien (Stockable)"
+
+#. module: uto_stock
+#. odoo-python
+#: code:addons/uto_stock/models/product_category.py:0
+msgid "The product type must be %(type)s for products of the category %(category)s."
+msgstr "Le type de produit doit être %(type)s pour les produits de la catégorie %(category)s."

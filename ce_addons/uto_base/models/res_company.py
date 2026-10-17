@@ -6,9 +6,9 @@ from odoo import models, fields
 class ResCompany(models.Model):
     _inherit = "res.company"
 
-    is_margin_vat = fields.Boolean(string="Activer la TVA sur marge (Vente d'occasion)", default=False)
+    is_margin_vat = fields.Boolean(string="Enable VAT on Margin (Second-hand Sales)", default=False)
     margin_vat_legal_mention = fields.Char(
-        string="Mention légale sur facture d'occasion",
+        string="Legal Mention on Second-hand Invoices",
         default="TVA sur marge - Article 297 A du CGI",
     )
 

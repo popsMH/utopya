@@ -2,27 +2,27 @@
 <templates xml:space="preserve">
 
     <!--
-        Héritage unique sur point_of_sale.ControlButtons.
-        Grâce à la dépendance pos_sale, son extension (Quotation/Order) est déjà
-        compilée dans le template avant que uto_pos ne s'applique.
+        Single inheritance on point_of_sale.ControlButtons.
+        Thanks to the pos_sale dependency, its extension (Quotation/Order) is already
+        compiled into the template before uto_pos is applied.
     -->
     <t t-name="uto_pos.ControlButtons" t-inherit="point_of_sale.ControlButtons" t-inherit-mode="extension">
-        <!-- Masquer le bouton "Note interne" de la barre principale (OrderlineNoteButton avec getter) -->
+        <!-- Hide the "Internal Note" button from the main bar (OrderlineNoteButton with getter) -->
         <xpath expr="//t[OrderlineNoteButton[@getter]]" position="replace"/>
-        <!-- Masquer "Note générale" dans la modal Actions -->
+        <!-- Hide "General Note" in the Actions modal -->
         <xpath expr="//div[contains(@class,'control-buttons-modal')]/OrderlineNoteButton[@label]" position="replace"/>
-        <!-- Masquer Liste de prix -->
+        <!-- Hide Pricelist -->
         <xpath expr="//button[contains(@class,'o_pricelist_button')]" position="replace"/>
-        <!-- Renommer "Quotation/Order" (ajouté par pos_sale) → "Importer Devis" -->
+        <!-- Rename "Quotation/Order" (added by pos_sale) → "Import Quotation" -->
         <xpath expr="//button[contains(@t-on-click,'onClickQuotation')]" position="replace">
             <button t-att-class="buttonClass" t-on-click="() => this.onClickQuotation()">
-                <i class="fa fa-link me-1" role="img" aria-label="Importer Devis" title="Importer Devis"/> Importer Devis
+                <i class="fa fa-link me-1" role="img" aria-label="Import Quotation" title="Import Quotation"/> Import Quotation
             </button>
         </xpath>
-        <!-- Renommer "Cancel Order" → "Annuler l'encaissement" -->
+        <!-- Rename "Cancel Order" → "Cancel the payment" -->
         <xpath expr="//button[contains(@t-on-click,'onDeleteOrder')]" position="replace">
             <button class="btn btn-secondary btn-lg py-5" t-on-click="() => this.pos.onDeleteOrder(this.pos.get_order())">
-                <i class="fa fa-trash me-1" role="img"/> Annuler l'encaissement
+                <i class="fa fa-trash me-1" role="img"/> Cancel the payment
             </button>
         </xpath>
     </t>

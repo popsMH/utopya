@@ -2,10 +2,10 @@
 <templates xml:space="preserve">
 
     <!--
-        Ajoute un bouton poubelle sur chaque ligne du panier.
-        Le wrapper div.position-relative englobe le Orderline (li) et le bouton absolu.
-        La classe pe-5 sur le Orderline pousse le prix vers la gauche pour éviter
-        que le bouton ne chevauche le montant.
+        Adds a trash button on each cart line.
+        The div.position-relative wrapper contains the Orderline (li) and the absolute button.
+        The pe-5 class on the Orderline pushes the price to the left so that
+        the button does not overlap the amount.
     -->
     <t t-name="uto_pos.OrderSummary" t-inherit="point_of_sale.OrderSummary" t-inherit-mode="extension">
         <xpath expr="//Orderline" position="replace">
@@ -23,7 +23,7 @@
                 <button class="position-absolute btn btn-sm btn-link text-danger p-1"
                     style="top: 50%; right: 0.4rem; transform: translateY(-50%); z-index: 10;"
                     t-on-click.stop="() => this.deleteLine(line)"
-                    title="Supprimer la ligne">
+                    title="Delete the line">
                     <i class="fa fa-trash fa-sm" />
                 </button>
             </div>

@@ -19,3 +19,24 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:uto_base.view_partner_form_inherit
 msgid "Repairs"
 msgstr "Réparations"
+
+#. module: uto_base
+#: model:ir.model.fields,field_description:uto_base.field_res_company__is_margin_vat
+msgid "Enable VAT on Margin (Second-hand Sales)"
+msgstr "Activer la TVA sur marge (Vente d'occasion)"
+
+#. module: uto_base
+#: model:ir.model.fields,field_description:uto_base.field_res_company__margin_vat_legal_mention
+msgid "Legal Mention on Second-hand Invoices"
+msgstr "Mention légale sur facture d'occasion"
+
+#. module: uto_base
+#: model:ir.model.fields,field_description:uto_base.field_product_template__is_occasion
+#: model:ir.model.fields,field_description:uto_base.field_product_product__is_occasion
+msgid "Second-hand Product"
+msgstr "Produit d'occasion"
+
+#. module: uto_base
+#: model_terms:ir.ui.view,arch_db:uto_base.view_company_form_occasion_trade_in
+msgid "Taxation (VAT on Margin)"
+msgstr "Fiscalité (TVA sur Marge)"

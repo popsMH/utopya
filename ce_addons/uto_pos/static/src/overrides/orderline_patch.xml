@@ -4,9 +4,9 @@
     <t t-name="uto_pos.Orderline" t-inherit="point_of_sale.Orderline" t-inherit-mode="extension">
 
         <!--
-            Supprime "/ Unité(s)" sur les lignes produit.
-            1. On retire le "/" de la fin du bloc t-if="!props.basic_receipt"
-            2. On supprime le <t t-esc="line.unit"> qui suit
+            Removes "/ Unit(s)" on product lines.
+            1. Remove the "/" at the end of the t-if="!props.basic_receipt" block
+            2. Remove the following <t t-esc="line.unit">
         -->
         <xpath expr="//t[@t-if='!props.basic_receipt']" position="replace">
             <t t-if="!props.basic_receipt">

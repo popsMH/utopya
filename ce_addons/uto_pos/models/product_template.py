@@ -1,6 +1,6 @@
 from odoo import api, models
 
-# Correspondance nom catégorie produit ↔ nom catégorie POS
+# Mapping product category name ↔ POS category name
 _CATEG_TO_POS = {
     'Devices': 'Devices',
     'Accessoires': 'Accessoires',
@@ -14,7 +14,7 @@ class ProductTemplate(models.Model):
 
     @api.model
     def _get_pos_category_for_name(self, categ_name):
-        """Retourne le pos.category correspondant au nom de catégorie produit (en anglais)."""
+        """Return the pos.category matching the product category name (in English)."""
         pos_name = _CATEG_TO_POS.get(categ_name)
         if not pos_name:
             return self.env['pos.category']

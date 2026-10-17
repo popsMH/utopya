@@ -9,7 +9,7 @@
 
             <xpath expr="//notebook" position="inside">
                 <page string="Occasion &amp; Trade-In" name="occasion_trade_in">
-                    <group string="Fiscalité (TVA sur Marge)">
+                    <group string="Taxation (VAT on Margin)">
                         <field name="is_margin_vat" widget="boolean_toggle"/>
                         <field name="margin_vat_legal_mention" invisible="not is_margin_vat"/>
                     </group>

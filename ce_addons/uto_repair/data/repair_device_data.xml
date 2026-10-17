@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo noupdate="1">
-    <!-- SMARTWATCH CAPACITIES: 4 Go, 8 Go, 16 Go, 32 Go, 64 Go, Inconnu -->
+    <!-- SMARTWATCH CAPACITIES: 4 GB, 8 GB, 16 GB, 32 GB, 64 GB, Unknown (record names are in French) -->
     <record model="device.capacity" id="4go_smartwatch" forcecreate="True">
         <field name="name">4 Go</field>
         <field name="default_code">4go</field>
@@ -44,7 +44,7 @@
         <field name="sequence">6</field>
     </record>
 
-    <!-- SMARTPHONE CAPACITIES: 16 Go, 32 Go, 64 Go, 128 Go, 256 Go, 512 Go, 1 To, 2 To, Inconnu -->
+    <!-- SMARTPHONE CAPACITIES: 16 GB, 32 GB, 64 GB, 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, Unknown (record names are in French) -->
     <record model="device.capacity" id="16go_smartphone" forcecreate="True">
         <field name="name">16 Go</field>
         <field name="default_code">16go</field>
@@ -109,7 +109,7 @@
         <field name="sequence">9</field>
     </record>
 
-    <!-- TABLET CAPACITIES: 16 Go, 32 Go, 64 Go, 128 Go, 256 Go, 512 Go, 1 To, 2 To, Inconnu -->
+    <!-- TABLET CAPACITIES: 16 GB, 32 GB, 64 GB, 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, Unknown (record names are in French) -->
     <record model="device.capacity" id="16go_tablet" forcecreate="True">
         <field name="name">16 Go</field>
         <field name="default_code">16go</field>
@@ -174,7 +174,7 @@
         <field name="sequence">9</field>
     </record>
 
-    <!-- LAPTOP CAPACITIES: 64 Go, 128 Go, 250 Go, 256 Go, 320 Go, 500 Go, 512 Go, 1 To, 2 To, 4 To, Inconnu -->
+    <!-- LAPTOP CAPACITIES: 64 GB, 128 GB, 250 GB, 256 GB, 320 GB, 500 GB, 512 GB, 1 TB, 2 TB, 4 TB, Unknown (record names are in French) -->
     <record model="device.capacity" id="64go_laptop" forcecreate="True">
         <field name="name">64 Go</field>
         <field name="default_code">64go</field>
@@ -254,7 +254,7 @@
     </record>
 
 
-    <!-- SMARTPHONE COLORS: Noir, Blanc, Gris, Argent, Or, Or Rose, Bleu, Rouge, Vert, Violet, Rose, Jaune, Orange, Crème, Titane, Bronze, Autre -->
+    <!-- SMARTPHONE COLORS: Black, White, Grey, Silver, Gold, Rose Gold, Blue, Red, Green, Purple, Pink, Yellow, Orange, Cream, Titanium, Bronze, Other (record names are in French) -->
     <record model="device.color" id="noir_smartphone" forcecreate="True">
         <field name="name">Noir</field>
         <field name="default_code">noir</field>
@@ -376,7 +376,7 @@
     </record>
 
 
-    <!-- TABLET COLORS: Noir, Blanc, Gris, Argent, Or, Or Rose, Bleu, Rose, Vert, Violet, Autre -->
+    <!-- TABLET COLORS: Black, White, Grey, Silver, Gold, Rose Gold, Blue, Pink, Green, Purple, Other (record names are in French) -->
     <record model="device.color" id="noir_tablet" forcecreate="True">
         <field name="name">Noir</field>
         <field name="default_code">noir</field>
@@ -455,7 +455,7 @@
         <field name="sequence">11</field>
     </record>
 
-    <!-- LAPTOP COLORS: Noir, Gris, Argent, Blanc, Bleu, Or, Or Rose, Rouge, Autre -->
+    <!-- LAPTOP COLORS: Black, Grey, Silver, White, Blue, Gold, Rose Gold, Red, Other (record names are in French) -->
     <record model="device.color" id="noir_laptop" forcecreate="True">
         <field name="name">Noir</field>
         <field name="default_code">noir</field>
@@ -520,7 +520,7 @@
         <field name="sequence">9</field>
     </record>
 
-    <!-- SMARTWATCH COLORS: Noir, Argent, Gris, Or, Or Rose, Bleu, Rouge, Vert, Blanc, Titane, Autre -->
+    <!-- SMARTWATCH COLORS: Black, Silver, Grey, Gold, Rose Gold, Blue, Red, Green, White, Titanium, Other (record names are in French) -->
     <record model="device.color" id="noir_smartwatch" forcecreate="True">
         <field name="name">Noir</field>
         <field name="default_code">noir</field>

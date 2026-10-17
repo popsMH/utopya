@@ -20,3 +20,289 @@ msgstr ""
 #: code:uto_pos/models/pos_config.py:0
 msgid "Cannot have more that one Point of Sale !"
 msgstr "On ne peut avoir qu'un seul point de vente !"
+
+#. module: uto_pos
+#: model_terms:ir.ui.view,arch_db:uto_pos.pos_session_sales_details_uto
+msgid "<strong>Closing note:</strong>"
+msgstr "<strong>Note de clôture :</strong>"
+
+#. module: uto_pos
+#: model_terms:ir.ui.view,arch_db:uto_pos.pos_session_sales_details_uto
+msgid "<strong>Discount Amount</strong>"
+msgstr "<strong>Montant des remises</strong>"
+
+#. module: uto_pos
+#: model_terms:ir.ui.view,arch_db:uto_pos.pos_session_sales_details_uto
+msgid "<strong>Number of Discounts</strong>"
+msgstr "<strong>Nombre de remises</strong>"
+
+#. module: uto_pos
+#: model_terms:ir.ui.view,arch_db:uto_pos.pos_session_sales_details_uto
+msgid "<strong>Opening note:</strong>"
+msgstr "<strong>Note d'ouverture :</strong>"
+
+#. module: uto_pos
+#. odoo-javascript
+#: code:addons/uto_pos/static/src/overrides/pos_store_patch.js:0
+msgid "Are you sure you want to delete this ticket with a total amount of %s?"
+msgstr "Êtes-vous sûr de vouloir supprimer ce ticket d'un montant total de %s ?"
+
+#. module: uto_pos
+#: model_terms:ir.ui.view,arch_db:uto_pos.pos_session_sales_details_uto
+msgid "As of"
+msgstr "Au"
+
+#. module: uto_pos
+#. odoo-javascript
+#: code:addons/uto_pos/static/src/overrides/opening_control_popup_patch.xml:0
+msgid "Back"
+msgstr "Retour"
+
+#. module: uto_pos
+#. odoo-javascript
+#: code:addons/uto_pos/static/src/overrides/closing_popup_patch.xml:0
+msgid "Back to the register"
+msgstr "Retour à la caisse"
+
+#. module: uto_pos
+#. odoo-javascript
+#: code:addons/uto_pos/static/src/overrides/pos_store_patch.js:0
+msgid "Cancel the current ticket"
+msgstr "Annuler le ticket en cours"
+
+#. module: uto_pos
+#. odoo-javascript
+#: code:addons/uto_pos/static/src/overrides/control_buttons.xml:0
+msgid "Cancel the payment"
+msgstr "Annuler l'encaissement"
+
+#. module: uto_pos
+#. odoo-javascript
+#: code:addons/uto_pos/static/src/overrides/closing_popup_patch.xml:0
+msgid "Card amount (payment terminal Z report)"
+msgstr "Montant CB (Ticket Z du TPE)"
+
+#. module: uto_pos
+#. odoo-javascript
+#. odoo-python
+#: code:addons/uto_pos/static/src/overrides/closing_popup_patch.xml:0
+#: code:addons/uto_pos/models/report_sale_details.py:0
+msgid "Cash"
+msgstr "Espèces"
+
+#. module: uto_pos
+#. odoo-javascript
+#: code:addons/uto_pos/static/src/overrides/closing_popup_patch.xml:0
+msgid "Cash counted in the drawer"
+msgstr "Espèces comptées dans le tiroir"
+
+#. module: uto_pos
+#. odoo-javascript
+#: code:addons/uto_pos/static/src/overrides/closing_popup_patch.xml:0
+#: code:addons/uto_pos/static/src/overrides/navbar.xml:0
+msgid "Cash movement"
+msgstr "Mouvement de caisse"
+
+#. module: uto_pos
+#. odoo-javascript
+#: code:addons/uto_pos/static/src/overrides/closing_popup_patch.js:0
+msgid "Closing details:"
+msgstr "Détail de clôture :"
+
+#. module: uto_pos
+#: model_terms:ir.ui.view,arch_db:uto_pos.pos_session_sales_details_uto
+msgid "Counted"
+msgstr "Compté"
+
+#. module: uto_pos
+#. odoo-javascript
+#. odoo-python
+#: code:addons/uto_pos/static/src/overrides/closing_popup_patch.xml:0
+#: code:addons/uto_pos/models/report_sale_details.py:0
+msgid "Credit Card (CB)"
+msgstr "Carte Bancaire (CB)"
+
+#. module: uto_pos
+#: model_terms:ir.ui.view,arch_db:uto_pos.pos_session_sales_details_uto
+msgid "Credit Notes / Refunds"
+msgstr "Avoirs / Remboursements"
+
+#. module: uto_pos
+#: model_terms:ir.ui.view,arch_db:uto_pos.pos_session_sales_details_uto
+msgid "Current Sales Report"
+msgstr "État des ventes en cours"
+
+#. module: uto_pos
+#. odoo-python
+#: code:addons/uto_pos/models/report_sale_details.py:0
+msgid "Customer Account"
+msgstr "Compte Client"
+
+#. module: uto_pos
+#. odoo-javascript
+#: code:addons/uto_pos/static/src/overrides/order_summary_patch.xml:0
+msgid "Delete the line"
+msgstr "Supprimer la ligne"
+
+#. module: uto_pos
+#: model_terms:ir.ui.view,arch_db:uto_pos.pos_session_sales_details_uto
+msgid "Difference"
+msgstr "Écart"
+
+#. module: uto_pos
+#: model_terms:ir.ui.view,arch_db:uto_pos.pos_session_sales_details_uto
+msgid "Discounts"
+msgstr "Remises"
+
+#. module: uto_pos
+#: model_terms:ir.ui.view,arch_db:uto_pos.pos_session_sales_details_uto
+msgid "Expected"
+msgstr "Attendu"
+
+#. module: uto_pos
+#. odoo-javascript
+#: code:addons/uto_pos/static/src/overrides/control_buttons.xml:0
+msgid "Import Quotation"
+msgstr "Importer Devis"
+
+#. module: uto_pos
+#. odoo-javascript
+#: code:addons/uto_pos/static/src/overrides/pos_store_patch.js:0
+msgid "Keep the ticket"
+msgstr "Conserver le ticket"
+
+#. module: uto_pos
+#: model_terms:ir.ui.view,arch_db:uto_pos.pos_session_sales_details_uto
+msgid "Label"
+msgstr "Intitulé"
+
+#. module: uto_pos
+#. odoo-javascript
+#: code:addons/uto_pos/static/src/overrides/navbar.xml:0
+#: code:addons/uto_pos/static/src/overrides/pos_store_patch.js:0
+msgid "Main Menu"
+msgstr "Menu Principal"
+
+#. module: uto_pos
+#. odoo-javascript
+#: code:addons/uto_pos/static/src/overrides/receipt_screen_patch.xml:0
+msgid "New ticket"
+msgstr "Nouveau ticket"
+
+#. module: uto_pos
+#: model_terms:ir.ui.view,arch_db:uto_pos.pos_session_sales_details_uto
+msgid "Number of transactions:"
+msgstr "Nombre de transactions :"
+
+#. module: uto_pos
+#. odoo-javascript
+#: code:addons/uto_pos/static/src/overrides/opening_control_popup_patch.xml:0
+msgid "Open the register"
+msgstr "Ouvrir la caisse"
+
+#. module: uto_pos
+#. odoo-javascript
+#: code:addons/uto_pos/static/src/overrides/opening_control_popup_patch.xml:0
+msgid "Opening Cash (Cash)"
+msgstr "Fond de Caisse (Espèces)"
+
+#. module: uto_pos
+#. odoo-javascript
+#: code:addons/uto_pos/static/src/overrides/closing_popup_patch.js:0
+msgid "Opening cash details:"
+msgstr "Détail du fond de caisse :"
+
+#. module: uto_pos
+#. odoo-javascript
+#: code:addons/uto_pos/static/src/overrides/opening_control_popup_patch.js:0
+msgid "Opening cash required"
+msgstr "Fond de caisse requis"
+
+#. module: uto_pos
+#. odoo-javascript
+#: code:addons/uto_pos/static/src/overrides/opening_control_popup_patch.xml:0
+msgid "Opening note"
+msgstr "Note d'ouverture"
+
+#. module: uto_pos
+#: model_terms:ir.ui.view,arch_db:uto_pos.pos_session_sales_details_uto
+msgid "Payments"
+msgstr "Paiements"
+
+#. module: uto_pos
+#. odoo-javascript
+#: code:addons/uto_pos/static/src/overrides/opening_control_popup_patch.js:0
+msgid "Please enter an amount greater than €0.00 to open the register. An opening cash amount is required to ensure reliable accounting closings."
+msgstr "Veuillez saisir un montant supérieur à 0,00 € pour ouvrir la caisse. Un fond de caisse est obligatoire pour garantir la fiabilité des clôtures comptables."
+
+#. module: uto_pos
+#: model:ir.actions.server,name:uto_pos.action_open_pos_direct
+msgid "Point of Sale"
+msgstr "Point de Vente"
+
+#. module: uto_pos
+#. odoo-javascript
+#: code:addons/uto_pos/static/src/overrides/order_receipt_patch.xml:0
+msgid "Powered by Optilane"
+msgstr "Propulsé par Optilane"
+
+#. module: uto_pos
+#. odoo-javascript
+#: code:addons/uto_pos/static/src/overrides/receipt_screen_patch.xml:0
+msgid "Print the ticket"
+msgstr "Imprimer le ticket"
+
+#. module: uto_pos
+#. odoo-javascript
+#: code:addons/uto_pos/static/src/overrides/closing_popup_patch.xml:0
+msgid "QualiRépar Bonus"
+msgstr "Bonus QualiRépar"
+
+#. module: uto_pos
+#. odoo-javascript
+#: code:addons/uto_pos/static/src/overrides/opening_control_popup_patch.xml:0
+msgid "Register Opening"
+msgstr "Ouverture de la Caisse"
+
+#. module: uto_pos
+#: model_terms:ir.ui.view,arch_db:uto_pos.pos_session_sales_details_uto
+msgid "Sales"
+msgstr "Ventes"
+
+#. module: uto_pos
+#: model_terms:ir.ui.view,arch_db:uto_pos.pos_session_sales_details_uto
+msgid "Sales Report"
+msgstr "État des ventes"
+
+#. module: uto_pos
+#: model_terms:ir.ui.view,arch_db:uto_pos.pos_session_sales_details_uto
+msgid "Session Control"
+msgstr "Contrôle de session"
+
+#. module: uto_pos
+#. odoo-javascript
+#: code:addons/uto_pos/static/src/overrides/order_receipt_patch.xml:0
+msgid "Ticket No."
+msgstr "Ticket N°"
+
+#. module: uto_pos
+#. odoo-javascript
+#: code:addons/uto_pos/static/src/overrides/closing_popup_patch.xml:0
+msgid "Total granted today"
+msgstr "Total accordé aujourd'hui"
+
+#. module: uto_pos
+#: model_terms:ir.ui.view,arch_db:uto_pos.pos_session_sales_details_uto
+msgid "VAT on Credit Notes"
+msgstr "TVA sur avoirs"
+
+#. module: uto_pos
+#: model_terms:ir.ui.view,arch_db:uto_pos.pos_session_sales_details_uto
+msgid "VAT on Sales"
+msgstr "TVA sur ventes"
+
+#. module: uto_pos
+#. odoo-javascript
+#: code:addons/uto_pos/static/src/overrides/pos_store_patch.js:0
+msgid "Yes, clear the ticket"
+msgstr "Oui, vider le ticket"

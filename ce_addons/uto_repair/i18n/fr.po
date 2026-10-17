@@ -159,6 +159,7 @@ msgstr "Marque de l'appareil"
 
 #. module: uto_repair
 #: model_terms:ir.ui.view,arch_db:uto_repair.view_repair_order_form_inherit
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_irreparability_certificate_wizard_form
 msgid "Cancel"
 msgstr "Annuler"
 
@@ -1052,6 +1053,7 @@ msgstr "Emplacement de destination des pièces supprimées"
 
 #. module: uto_repair
 #: model:ir.model,name:uto_repair.model_repair_order
+#: model:ir.model.fields,field_description:uto_repair.field_repair_irreparability_certificate_wizard__repair_order_id
 msgid "Repair Order"
 msgstr "Ordre de réparation"
 
@@ -1523,3 +1525,204 @@ msgstr "Créer une nouvelle Référence commerciale"
 #: model:ir.model.fields,field_description:uto_repair.field_repair_order__visual_condition
 msgid "Visual Condition"
 msgstr "État visuel à la réception"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_irreparability_certificate_document
+msgid ",\n                                we declare this device technically and/or economically irreparable."
+msgstr ",\n                                nous déclarons cet appareil techniquement et/ou économiquement irréparable."
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_irreparability_certificate_document
+msgid ",\n                            hereby certify that I have examined the following device:"
+msgstr ",\n                            certifie par la présente avoir examiné l'appareil suivant :"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_irreparability_certificate_document
+msgid ", on"
+msgstr ", le"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_irreparability_certificate_document
+msgid "<strong>Irreparability reason(s):</strong>"
+msgstr "<strong>Motif(s) de l'irréparabilité :</strong>"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_irreparability_certificate_document
+msgid "acting as a specialized technician for the company"
+msgstr "agissant en qualité de technicien spécialisé pour la société"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_irreparability_certificate_document
+msgid "After a full technical assessment carried out on"
+msgstr "Après une expertise technique complète réalisée le"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_irreparability_certificate_document
+msgid "Brand:"
+msgstr "Marque :"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_irreparability_certificate_document
+msgid "by:"
+msgstr "par :"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_irreparability_certificate_document
+msgid "Consequently, any repair work is impossible or unjustified. The device is returned to the customer as is \n                                (or sent to a WEEE recycling channel at the customer's request). This certificate is issued in a single copy, to serve \n                                and avail as required by law, in particular with insurance companies for the filing of a claim."
+msgstr "En conséquence, toute intervention de réparation est impossible ou injustifiée. L'appareil est restitué au client en l'état \n                                (ou orienté vers une filière de recyclage DEEE selon sa volonté). Ce certificat est délivré en un exemplaire unique, pour servir \n                                et valoir ce que de droit, notamment auprès des compagnies d'assurance pour la constitution d'un dossier de sinistre."
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_irreparability_certificate_wizard_form
+msgid "Describe the irreparability reason..."
+msgstr "Décrivez le motif de l'irréparabilité..."
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_irreparability_certificate_document
+msgid "Device type:"
+msgstr "Type d'appareil :"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_irreparability_certificate_document
+msgid "DIAGNOSIS RESULT"
+msgstr "RÉSULTAT DU DIAGNOSTIC"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_irreparability_certificate_document
+msgid "Document No.:"
+msgstr "Document N° :"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_irreparability_certificate_document
+msgid "Done at"
+msgstr "Fait à"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_irreparability_certificate_document
+msgid "Email:"
+msgstr "Email :"
+
+#. module: uto_repair
+#: model:ir.model.fields,help:uto_repair.field_repair_irreparability_certificate_wizard__motif_irreparabilite_autre
+msgid "Fill in this field if you selected \"Other\""
+msgstr "Remplissez ce champ si vous avez sélectionné \"Autre\""
+
+#. module: uto_repair
+#. odoo-python
+#: code:addons/uto_repair/models/repair.py:0
+msgid "Generate a Certificate"
+msgstr "Générer un certificat"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_irreparability_certificate_wizard_form
+msgid "Generate and Download the Certificate"
+msgstr "Générer et Télécharger le Certificat"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_repair_order_form_inherit
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_irreparability_certificate_wizard_form
+msgid "Generate Irreparability Certificate"
+msgstr "Générer Certificat d'Irréparabilité"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_irreparability_certificate_document
+msgid "I, the undersigned,"
+msgstr "Je soussigné(e),"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.view_repair_order_form_inherit
+#: model:ir.actions.report,name:uto_repair.action_report_irreparability_certificate
+msgid "Irreparability Certificate"
+msgstr "Certificat d'Irréparabilité"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_irreparability_certificate_document
+msgid "IRREPARABILITY CERTIFICATE"
+msgstr "CERTIFICAT D'IRRÉPARABILITÉ"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__date_certificat_irreparabilite
+msgid "Irreparability Certificate Date"
+msgstr "Date du certificat d'irréparabilité"
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__motif_irreparabilite
+#: model:ir.model.fields,field_description:uto_repair.field_repair_irreparability_certificate_wizard__motif_irreparabilite
+msgid "Irreparability Reason"
+msgstr "Motif de l'irréparabilité"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_irreparability_certificate_document
+msgid "Model:"
+msgstr "Modèle :"
+
+#. module: uto_repair
+#: model:ir.model.fields.selection,name:uto_repair.selection__repair_order__motif_irreparabilite__pieces_obsoletes
+#: model:ir.model.fields.selection,name:uto_repair.selection__repair_irreparability_certificate_wizard__motif_irreparabilite__pieces_obsoletes
+msgid "Obsolete parts"
+msgstr "Pièces obsolètes"
+
+#. module: uto_repair
+#: model:ir.model.fields.selection,name:uto_repair.selection__repair_order__motif_irreparabilite__autre
+#: model:ir.model.fields.selection,name:uto_repair.selection__repair_irreparability_certificate_wizard__motif_irreparabilite__autre
+msgid "Other"
+msgstr "Autre"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_irreparability_certificate_document
+msgid "Phone:"
+msgstr "Téléphone :"
+
+#. module: uto_repair
+#. odoo-python
+#: code:addons/uto_repair/wizard/irreparability_certificate.py:0
+msgid "Please fill in the reason details."
+msgstr "Veuillez remplir les précisions sur le motif."
+
+#. module: uto_repair
+#: model:ir.model.fields,field_description:uto_repair.field_repair_order__motif_irreparabilite_autre
+#: model:ir.model.fields,field_description:uto_repair.field_repair_irreparability_certificate_wizard__motif_irreparabilite_autre
+msgid "Reason Details"
+msgstr "Précisions sur le motif"
+
+#. module: uto_repair
+#: model:ir.model.fields.selection,name:uto_repair.selection__repair_order__motif_irreparabilite__cout_reparation
+#: model:ir.model.fields.selection,name:uto_repair.selection__repair_irreparability_certificate_wizard__motif_irreparabilite__cout_reparation
+msgid "Repair cost > Device value"
+msgstr "Coût de réparation > Valeur appareil"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_irreparability_certificate_document
+msgid "Serial Number / IMEI:"
+msgstr "Numéro de Série / IMEI :"
+
+#. module: uto_repair
+#: model:ir.model.fields.selection,name:uto_repair.selection__repair_order__motif_irreparabilite__oxidation_severe
+#: model:ir.model.fields.selection,name:uto_repair.selection__repair_irreparability_certificate_wizard__motif_irreparabilite__oxidation_severe
+msgid "Severe oxidation"
+msgstr "Oxydation sévère"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_irreparability_certificate_document
+msgid "SIRET No.:"
+msgstr "N° SIRET :"
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_irreparability_certificate_document
+msgid "Technician's signature and company stamp"
+msgstr "Signature du technicien et Cachet de l'entreprise"
+
+#. module: uto_repair
+#. odoo-python
+#: code:addons/uto_repair/wizard/irreparability_certificate.py:0
+msgid "The IMEI / Serial number is required to generate the irreparability certificate. Please fill it in on the repair order."
+msgstr "Le numéro IMEI / Série est obligatoire pour générer le certificat d'irréparabilité. Veuillez le renseigner dans la fiche de réparation."
+
+#. module: uto_repair
+#: model_terms:ir.ui.view,arch_db:uto_repair.report_irreparability_certificate_document
+msgid "This device was dropped off at our workshop on"
+msgstr "Cet appareil a été déposé dans nos ateliers le"
+
+#. module: uto_repair
+#: model:ir.model,name:uto_repair.model_repair_irreparability_certificate_wizard
+msgid "Wizard to generate the irreparability certificate"
+msgstr "Wizard pour générer le certificat d'irréparabilité"

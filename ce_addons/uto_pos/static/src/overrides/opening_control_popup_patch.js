@@ -3,6 +3,7 @@ import { OpeningControlPopup } from "@point_of_sale/app/store/opening_control_po
 import { onMounted, onWillUnmount } from "@odoo/owl";
 import { AlertDialog } from "@web/core/confirmation_dialog/confirmation_dialog";
 import { parseFloat } from "@web/views/fields/parsers";
+import { _t } from "@web/core/l10n/translation";
 
 patch(OpeningControlPopup.prototype, {
     setup() {
@@ -15,8 +16,8 @@ patch(OpeningControlPopup.prototype, {
     async confirm() {
         if (parseFloat(this.state.openingCash) === 0) {
             this.dialog.add(AlertDialog, {
-                title: "Fond de caisse requis",
-                body: "Veuillez saisir un montant supérieur à 0,00 € pour ouvrir la caisse. Un fond de caisse est obligatoire pour garantir la fiabilité des clôtures comptables.",
+                title: _t("Opening cash required"),
+                body: _t("Please enter an amount greater than €0.00 to open the register. An opening cash amount is required to ensure reliable accounting closings."),
             });
             return;
         }

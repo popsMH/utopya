@@ -305,21 +305,21 @@ class Repair(models.Model):
     # Irreparability certificate fields
     motif_irreparabilite = fields.Selection(
         [
-            ('oxidation_severe', 'Oxydation sévère'),
-            ('pieces_obsoletes', 'Pièces obsolètes'),
-            ('cout_reparation', 'Coût de réparation > Valeur appareil'),
-            ('autre', 'Autre'),
+            ('oxidation_severe', 'Severe oxidation'),
+            ('pieces_obsoletes', 'Obsolete parts'),
+            ('cout_reparation', 'Repair cost > Device value'),
+            ('autre', 'Other'),
         ],
-        string='Motif de l\'irréparabilité',
+        string='Irreparability Reason',
         copy=False,
         tracking=True,
     )
     motif_irreparabilite_autre = fields.Text(
-        string='Précisions sur le motif',
+        string='Reason Details',
         copy=False,
     )
     date_certificat_irreparabilite = fields.Datetime(
-        string='Date du certificat d\'irréparabilité',
+        string='Irreparability Certificate Date',
         readonly=True,
         copy=False,
     )
@@ -1301,10 +1301,10 @@ class Repair(models.Model):
             })
 
     def action_open_irreparability_wizard(self):
-        """Ouvre le wizard pour générer le certificat d'irréparabilité"""
+        """Open the wizard to generate the irreparability certificate"""
         self.ensure_one()
         return {
-            'name': _('Générer un certificat'),
+            'name': _('Generate a Certificate'),
             'type': 'ir.actions.act_window',
             'res_model': 'repair.irreparability.certificate.wizard',
             'view_mode': 'form',

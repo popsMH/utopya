@@ -73,7 +73,7 @@ class ProvisioningAPI(http.Controller):
         # if plan == "Premium":
         #     groups.extend([
         #         request.env.ref("point_of_sale.group_pos_manager").id,
-        #         # + accès API, réparation, etc.
+        #         # + API access, repair, etc.
         #     ])
         return groups
 
@@ -106,7 +106,7 @@ class ProvisioningAPI(http.Controller):
             'name': 'Caisse Principale'
         }
         point_of_sale = request.env['pos.config'].sudo().with_company(company).create(pos_data)
-        # activer la barre catégories avec les 4 catégories métier prédéfinies
+        # enable the category bar with the 4 predefined business categories
         pos_categories = request.env['pos.category'].sudo().search([
             ('name', 'in', ['Devices', 'Accessoires', 'Pièces Détachées', "Main d'œuvre & Forfaits"]),
         ])

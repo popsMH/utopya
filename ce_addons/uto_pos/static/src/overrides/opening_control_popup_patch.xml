@@ -3,40 +3,40 @@
 
     <t t-name="uto_pos.OpeningControlPopup" t-inherit="point_of_sale.OpeningControlPopup" t-inherit-mode="extension">
 
-        <!-- 1. Titre : "Opening Control" → "Ouverture de la Caisse" -->
+        <!-- 1. Title: "Opening Control" → "Register Opening" -->
         <xpath expr="//h4[contains(@class,'modal-title')]" position="replace">
-            <h4 class="modal-title text-break">Ouverture de la Caisse</h4>
+            <h4 class="modal-title text-break">Register Opening</h4>
         </xpath>
 
-        <!-- 2. Label espèces : "Opening cash" → "Fond de Caisse (Espèces)" -->
+        <!-- 2. Cash label: "Opening cash" → "Opening Cash (Cash)" -->
         <xpath expr="//div[contains(@class,'opening-cash-section')]/label" position="replace">
-            <label class="form-label">Fond de Caisse (Espèces)</label>
+            <label class="form-label">Opening Cash (Cash)</label>
         </xpath>
 
-        <!-- 3. Label note : "Opening note" → "Note d'ouverture" -->
+        <!-- 3. Note label: "Opening note" -->
         <xpath expr="//label[@for='openingNotes']" position="replace">
-            <label class="form-label" for="openingNotes">Note d'ouverture</label>
+            <label class="form-label" for="openingNotes">Opening note</label>
         </xpath>
 
-        <!-- 4. Bouton confirmation : "Open Register" → "Ouvrir la caisse" -->
+        <!-- 4. Confirmation button: "Open Register" → "Open the register" -->
         <xpath expr="//button[contains(@class,'btn-primary')]" position="replace">
             <button class="button btn btn-lg btn-primary"
                 t-on-click="confirm"
                 t-att-disabled="!env.utils.isValidFloat(state.openingCash)">
-                Ouvrir la caisse
+                Open the register
             </button>
         </xpath>
 
         <!--
-            5. Bouton "Discard" → "Retour" :
-            Supprime la session en cours (état opening_control) via pos.closePos()
-            puis redirige vers le menu principal (/odoo/home).
-            Il est ainsi impossible d'accéder à l'écran de vente sans déclarer le fond de caisse.
+            5. "Discard" button → "Back":
+            Deletes the current session (opening_control state) via pos.closePos()
+            then redirects to the main menu (/odoo/home).
+            This makes it impossible to reach the sales screen without declaring the opening cash.
         -->
         <xpath expr="//button[contains(@class,'backend-button')]" position="replace">
             <button class="button btn btn-lg btn-secondary"
                 t-on-click="() => this.pos.closePos()">
-                Retour
+                Back
             </button>
         </xpath>
 

@@ -12,7 +12,7 @@ class ProductCategory(models.Model):
     name = fields.Char(translate=True)
     product_type = fields.Selection(
         selection=[
-            ('consu', 'Bien (Stockable)'),
+            ('consu', 'Goods (Storable)'),
             ('service', 'Service'),
         ],
         string='Product Type',
@@ -47,7 +47,7 @@ class ProductTemplate(models.Model):
         for rec in self:
             if rec.categ_id and rec.categ_id.product_type and rec.type != rec.categ_id.product_type:
                 raise ValidationError(_(
-                    'Le type de produit doit être %(type)s pour les produits de la catégorie %(category)s.',
+                    'The product type must be %(type)s for products of the category %(category)s.',
                     type=dict(self.fields_get(['type'])['type']['selection']).get(rec.categ_id.product_type),
                     category=rec.categ_id.display_name,
                 ))
